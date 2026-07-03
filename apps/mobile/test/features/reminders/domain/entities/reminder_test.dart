@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/reminders/domain/entities/reminder.dart';
+import 'package:asheeighe/features/reminders/domain/entities/reminder.dart';
 
 void main() {
   group('LinkedEntityType', () {

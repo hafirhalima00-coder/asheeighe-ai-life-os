@@ -143,7 +143,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen>
         ),
         const SizedBox(height: 20),
         const Text(
-          'Unlock PINKZ Pro',
+          'Unlock asheeighe Pro',
           style: TextStyle(
             color: Colors.white,
             fontSize: 28,

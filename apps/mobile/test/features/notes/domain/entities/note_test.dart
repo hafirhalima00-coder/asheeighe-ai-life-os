@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/notes/domain/entities/note.dart';
+import 'package:asheeighe/features/notes/domain/entities/note.dart';
 
 void main() {
   group('NoteType', () {

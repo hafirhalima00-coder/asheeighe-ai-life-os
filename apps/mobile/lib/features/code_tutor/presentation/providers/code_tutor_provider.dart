@@ -20,7 +20,7 @@ final codeTutorLocalDataSourceProvider = Provider<CodeTutorLocalDataSource>((ref
 
 final codeTutorRemoteDataSourceProvider = Provider<CodeTutorRemoteDataSource>((ref) {
   return CodeTutorRemoteDataSource(
-    baseUrl: 'https://api.pinkz.app',
+    baseUrl: 'https://api.asheeighe.app',
   );
 });
 

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/app/navigation/bottom_nav.dart';
+import 'package:asheeighe/app/navigation/bottom_nav.dart';
 
 void main() {
-  group('PinkzNavigationBar', () {
+  group('AsheeigheNavigationBar', () {
     testWidgets('should render 5 tabs', (tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: PinkzNavigationBar(
+            body: AsheeigheNavigationBar(
               currentIndex: 0,
               onTap: (index) {},
             ),
@@ -28,7 +28,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: PinkzNavigationBar(
+            body: AsheeigheNavigationBar(
               currentIndex: 0,
               onTap: (index) => tappedIndex = index,
             ),
@@ -44,7 +44,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: PinkzNavigationBar(
+            body: AsheeigheNavigationBar(
               currentIndex: 2,
               onTap: (index) {},
             ),
@@ -65,7 +65,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: PinkzNavigationBar(
+            body: AsheeigheNavigationBar(
               currentIndex: 0,
               onTap: (index) {},
               badgeCounts: {1: 3, 3: 5},
@@ -82,7 +82,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: PinkzNavigationBar(
+            body: AsheeigheNavigationBar(
               currentIndex: 0,
               onTap: (index) {},
               badgeCounts: {1: 100},
@@ -98,7 +98,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: PinkzNavigationBar(
+            body: AsheeigheNavigationBar(
               currentIndex: 0,
               onTap: (index) {},
               badgeCounts: {1: 0},
@@ -114,7 +114,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: PinkzNavigationBar(
+            body: AsheeigheNavigationBar(
               currentIndex: 0,
               onTap: (index) {},
             ),
@@ -133,7 +133,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: PinkzNavigationBar(
+            body: AsheeigheNavigationBar(
               currentIndex: 0,
               onTap: (index) {},
             ),
@@ -148,7 +148,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: PinkzNavigationBar(
+            body: AsheeigheNavigationBar(
               currentIndex: 0,
               onTap: (index) {},
             ),

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/core/errors/failures.dart';
+import 'package:asheeighe/core/errors/failures.dart';
 
 void main() {
   group('Failure sealed class hierarchy', () {

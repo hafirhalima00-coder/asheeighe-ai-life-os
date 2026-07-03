@@ -1,38 +1,38 @@
 import 'package:flutter/material.dart';
-import 'pinkz_colors.dart';
+import 'asheeighe_colors.dart';
 import 'typography.dart';
 
-abstract final class PinkzTheme {
-  PinkzTheme._();
+abstract final class AsheeigheTheme {
+  AsheeigheTheme._();
 
   static ThemeData get light => _buildLight();
   static ThemeData get dark => _buildDark();
 
   static ThemeData _buildLight() {
     final colorScheme = ColorScheme.light(
-      primary: PinkzColors.pastelPink,
+      primary: AsheeigheColors.pastelPink,
       onPrimary: Colors.black87,
-      primaryContainer: PinkzColors.softRose,
+      primaryContainer: AsheeigheColors.softRose,
       onPrimaryContainer: Colors.black87,
-      secondary: PinkzColors.softLavender,
+      secondary: AsheeigheColors.softLavender,
       onSecondary: Colors.black87,
-      secondaryContainer: PinkzColors.gentlePurple,
+      secondaryContainer: AsheeigheColors.gentlePurple,
       onSecondaryContainer: Colors.black87,
-      tertiary: PinkzColors.mint,
+      tertiary: AsheeigheColors.mint,
       onTertiary: Colors.black87,
-      error: PinkzColors.error,
+      error: AsheeigheColors.error,
       onError: Colors.white,
-      errorContainer: PinkzColors.errorContainer,
+      errorContainer: AsheeigheColors.errorContainer,
       onErrorContainer: Colors.black87,
-      surface: PinkzColors.surfaceLight,
-      onSurface: PinkzColors.surfaceOnLight,
-      surfaceContainerHighest: PinkzColors.surfaceContainerLight,
+      surface: AsheeigheColors.surfaceLight,
+      onSurface: AsheeigheColors.surfaceOnLight,
+      surfaceContainerHighest: AsheeigheColors.surfaceContainerLight,
       onSurfaceVariant: const Color(0xFF49454F),
       outline: const Color(0xFF79747E),
       outlineVariant: const Color(0xFFCAC4D0),
-      inverseSurface: PinkzColors.surfaceDark,
-      onInverseSurface: PinkzColors.surfaceOnDark,
-      inversePrimary: PinkzColors.darkPastelPink,
+      inverseSurface: AsheeigheColors.surfaceDark,
+      onInverseSurface: AsheeigheColors.surfaceOnDark,
+      inversePrimary: AsheeigheColors.darkPastelPink,
       shadow: Colors.black26,
       scrim: Colors.black38,
     );
@@ -40,7 +40,7 @@ abstract final class PinkzTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: colorScheme,
-      textTheme: PinkzTypography.textTheme,
+      textTheme: AsheeigheTypography.textTheme,
       brightness: Brightness.light,
 
       // ─── Card ──────────────────────────────────
@@ -51,7 +51,7 @@ abstract final class PinkzTheme {
           borderRadius: BorderRadius.circular(20),
         ),
         clipBehavior: Clip.antiAlias,
-        color: PinkzColors.creamWhite,
+        color: AsheeigheColors.creamWhite,
         surfaceTintColor: Colors.transparent,
       ),
 
@@ -61,9 +61,9 @@ abstract final class PinkzTheme {
         scrolledUnderElevation: 1,
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        foregroundColor: PinkzColors.surfaceOnLight,
+        foregroundColor: AsheeigheColors.surfaceOnLight,
         surfaceTintColor: Colors.transparent,
-        titleTextStyle: PinkzTypography.textTheme.titleLarge?.copyWith(
+        titleTextStyle: AsheeigheTypography.textTheme.titleLarge?.copyWith(
           fontWeight: FontWeight.w600,
         ),
       ),
@@ -72,12 +72,12 @@ abstract final class PinkzTheme {
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         elevation: 8,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: PinkzColors.creamWhite,
-        selectedItemColor: PinkzColors.pastelPink,
+        backgroundColor: AsheeigheColors.creamWhite,
+        selectedItemColor: AsheeigheColors.pastelPink,
         unselectedItemColor: const Color(0xFF79747E),
-        selectedLabelStyle: PinkzTypography.textTheme.labelMedium,
-        unselectedLabelStyle: PinkzTypography.textTheme.labelSmall,
-        indicatorColor: PinkzColors.pastelPink.withOpacity(0.24),
+        selectedLabelStyle: AsheeigheTypography.textTheme.labelMedium,
+        unselectedLabelStyle: AsheeigheTypography.textTheme.labelSmall,
+        indicatorColor: AsheeigheColors.pastelPink.withOpacity(0.24),
       ),
 
       // ─── Floating Action Button ────────────────
@@ -87,15 +87,15 @@ abstract final class PinkzTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
-        backgroundColor: PinkzColors.pastelPink,
+        backgroundColor: AsheeigheColors.pastelPink,
         foregroundColor: Colors.black87,
-        extendedTextStyle: PinkzTypography.textTheme.labelLarge,
+        extendedTextStyle: AsheeigheTypography.textTheme.labelLarge,
       ),
 
       // ─── Input Decoration ──────────────────────
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: PinkzColors.creamWhite,
+        fillColor: AsheeigheColors.creamWhite,
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,
           vertical: 14,
@@ -110,24 +110,24 @@ abstract final class PinkzTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: PinkzColors.pastelPink, width: 2),
+          borderSide: const BorderSide(color: AsheeigheColors.pastelPink, width: 2),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: PinkzColors.error, width: 1.5),
+          borderSide: const BorderSide(color: AsheeigheColors.error, width: 1.5),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: PinkzColors.error, width: 2),
+          borderSide: const BorderSide(color: AsheeigheColors.error, width: 2),
         ),
-        labelStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
+        labelStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
           color: const Color(0xFF49454F),
         ),
-        hintStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
+        hintStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
           color: const Color(0xFF79747E),
         ),
-        errorStyle: PinkzTypography.textTheme.bodySmall?.copyWith(
-          color: PinkzColors.error,
+        errorStyle: AsheeigheTypography.textTheme.bodySmall?.copyWith(
+          color: AsheeigheColors.error,
         ),
       ),
 
@@ -139,8 +139,8 @@ abstract final class PinkzTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
-          textStyle: PinkzTypography.textTheme.labelLarge,
-          backgroundColor: PinkzColors.pastelPink,
+          textStyle: AsheeigheTypography.textTheme.labelLarge,
+          backgroundColor: AsheeigheColors.pastelPink,
           foregroundColor: Colors.black87,
         ),
       ),
@@ -152,8 +152,8 @@ abstract final class PinkzTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
-          textStyle: PinkzTypography.textTheme.labelLarge,
-          backgroundColor: PinkzColors.pastelPink,
+          textStyle: AsheeigheTypography.textTheme.labelLarge,
+          backgroundColor: AsheeigheColors.pastelPink,
           foregroundColor: Colors.black87,
         ),
       ),
@@ -165,9 +165,9 @@ abstract final class PinkzTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
-          textStyle: PinkzTypography.textTheme.labelLarge,
-          side: const BorderSide(color: PinkzColors.pastelPink),
-          foregroundColor: PinkzColors.surfaceOnLight,
+          textStyle: AsheeigheTypography.textTheme.labelLarge,
+          side: const BorderSide(color: AsheeigheColors.pastelPink),
+          foregroundColor: AsheeigheColors.surfaceOnLight,
         ),
       ),
 
@@ -178,8 +178,8 @@ abstract final class PinkzTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          textStyle: PinkzTypography.textTheme.labelLarge,
-          foregroundColor: PinkzColors.pastelPink,
+          textStyle: AsheeigheTypography.textTheme.labelLarge,
+          foregroundColor: AsheeigheColors.pastelPink,
         ),
       ),
 
@@ -190,10 +190,10 @@ abstract final class PinkzTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
-        labelStyle: PinkzTypography.textTheme.labelMedium,
-        secondaryLabelStyle: PinkzTypography.textTheme.labelMedium,
-        backgroundColor: PinkzColors.softLavender.withOpacity(0.5),
-        selectedColor: PinkzColors.pastelPink.withOpacity(0.3),
+        labelStyle: AsheeigheTypography.textTheme.labelMedium,
+        secondaryLabelStyle: AsheeigheTypography.textTheme.labelMedium,
+        backgroundColor: AsheeigheColors.softLavender.withOpacity(0.5),
+        selectedColor: AsheeigheColors.pastelPink.withOpacity(0.3),
         disabledColor: const Color(0xFFE0E0E0),
         surfaceTintColor: Colors.transparent,
         side: BorderSide.none,
@@ -208,7 +208,7 @@ abstract final class PinkzTheme {
         }),
         trackColor: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
-            return PinkzColors.pastelPink;
+            return AsheeigheColors.pastelPink;
           }
           return const Color(0xFFCAC4D0);
         }),
@@ -216,14 +216,14 @@ abstract final class PinkzTheme {
 
       // ─── Slider ────────────────────────────────
       sliderTheme: SliderThemeData(
-        activeTrackColor: PinkzColors.pastelPink,
-        inactiveTrackColor: PinkzColors.pastelPink.withOpacity(0.24),
-        thumbColor: PinkzColors.pastelPink,
-        overlayColor: PinkzColors.pastelPink.withOpacity(0.12),
+        activeTrackColor: AsheeigheColors.pastelPink,
+        inactiveTrackColor: AsheeigheColors.pastelPink.withOpacity(0.24),
+        thumbColor: AsheeigheColors.pastelPink,
+        overlayColor: AsheeigheColors.pastelPink.withOpacity(0.12),
         activeTickMarkColor: Colors.white,
-        inactiveTickMarkColor: PinkzColors.pastelPink.withOpacity(0.5),
-        valueIndicatorColor: PinkzColors.pastelPink,
-        valueIndicatorTextStyle: PinkzTypography.textTheme.labelSmall?.copyWith(
+        inactiveTickMarkColor: AsheeigheColors.pastelPink.withOpacity(0.5),
+        valueIndicatorColor: AsheeigheColors.pastelPink,
+        valueIndicatorTextStyle: AsheeigheTypography.textTheme.labelSmall?.copyWith(
           color: Colors.black87,
         ),
       ),
@@ -234,9 +234,9 @@ abstract final class PinkzTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        backgroundColor: PinkzColors.creamWhite,
-        titleTextStyle: PinkzTypography.textTheme.headlineSmall,
-        contentTextStyle: PinkzTypography.textTheme.bodyMedium,
+        backgroundColor: AsheeigheColors.creamWhite,
+        titleTextStyle: AsheeigheTypography.textTheme.headlineSmall,
+        contentTextStyle: AsheeigheTypography.textTheme.bodyMedium,
       ),
 
       // ─── Bottom Sheet ──────────────────────────
@@ -245,11 +245,11 @@ abstract final class PinkzTheme {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
         ),
-        backgroundColor: PinkzColors.creamWhite,
+        backgroundColor: AsheeigheColors.creamWhite,
         surfaceTintColor: Colors.transparent,
         showDragHandle: true,
         dragHandleColor: const Color(0xFFCAC4D0),
-        modalBackgroundColor: PinkzColors.creamWhite,
+        modalBackgroundColor: AsheeigheColors.creamWhite,
         modalElevation: 8,
       ),
 
@@ -260,36 +260,36 @@ abstract final class PinkzTheme {
           borderRadius: BorderRadius.circular(14),
         ),
         insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        backgroundColor: PinkzColors.surfaceOnLight,
-        contentTextStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
-          color: PinkzColors.surfaceOnDark,
+        backgroundColor: AsheeigheColors.surfaceOnLight,
+        contentTextStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
+          color: AsheeigheColors.surfaceOnDark,
         ),
-        actionTextColor: PinkzColors.pastelPink,
+        actionTextColor: AsheeigheColors.pastelPink,
       ),
 
       // ─── Tooltip ───────────────────────────────
       tooltipTheme: TooltipThemeData(
         decoration: BoxDecoration(
-          color: PinkzColors.surfaceOnLight,
+          color: AsheeigheColors.surfaceOnLight,
           borderRadius: BorderRadius.circular(8),
         ),
-        textStyle: PinkzTypography.textTheme.bodySmall?.copyWith(
-          color: PinkzColors.surfaceOnDark,
+        textStyle: AsheeigheTypography.textTheme.bodySmall?.copyWith(
+          color: AsheeigheColors.surfaceOnDark,
         ),
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       ),
 
       // ─── Date Picker ───────────────────────────
       datePickerTheme: DatePickerThemeData(
-        backgroundColor: PinkzColors.creamWhite,
+        backgroundColor: AsheeigheColors.creamWhite,
         surfaceTintColor: Colors.transparent,
-        headerBackgroundColor: PinkzColors.pastelPink,
+        headerBackgroundColor: AsheeigheColors.pastelPink,
         headerForegroundColor: Colors.black87,
-        todayForegroundColor: WidgetStateProperty.all(PinkzColors.pastelPink),
+        todayForegroundColor: WidgetStateProperty.all(AsheeigheColors.pastelPink),
         todayBackgroundColor: WidgetStateProperty.all(
-          PinkzColors.pastelPink.withOpacity(0.12),
+          AsheeigheColors.pastelPink.withOpacity(0.12),
         ),
-        selectedDayBackgroundColor: WidgetStateProperty.all(PinkzColors.pastelPink),
+        selectedDayBackgroundColor: WidgetStateProperty.all(AsheeigheColors.pastelPink),
         selectedDayForegroundColor: WidgetStateProperty.all(Colors.black87),
         dayShape: const WidgetStatePropertyAll(ContinuousRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -297,23 +297,23 @@ abstract final class PinkzTheme {
         yearShape: const WidgetStatePropertyAll(ContinuousRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(12)),
         )),
-        dayStyle: PinkzTypography.textTheme.bodyMedium,
-        yearStyle: PinkzTypography.textTheme.bodyMedium,
-        weekdayStyle: PinkzTypography.textTheme.labelMedium?.copyWith(
+        dayStyle: AsheeigheTypography.textTheme.bodyMedium,
+        yearStyle: AsheeigheTypography.textTheme.bodyMedium,
+        weekdayStyle: AsheeigheTypography.textTheme.labelMedium?.copyWith(
           color: const Color(0xFF79747E),
         ),
       ),
 
       // ─── Time Picker ───────────────────────────
       timePickerTheme: TimePickerThemeData(
-        backgroundColor: PinkzColors.creamWhite,
+        backgroundColor: AsheeigheColors.creamWhite,
         surfaceTintColor: Colors.transparent,
-        dialHandColor: PinkzColors.pastelPink,
-        dialBackgroundColor: PinkzColors.pastelPink.withOpacity(0.12),
-        hourMinuteColor: PinkzColors.pastelPink.withOpacity(0.12),
-        hourMinuteTextColor: PinkzColors.surfaceOnLight,
-        dayPeriodColor: PinkzColors.pastelPink.withOpacity(0.12),
-        dayPeriodTextColor: PinkzColors.surfaceOnLight,
+        dialHandColor: AsheeigheColors.pastelPink,
+        dialBackgroundColor: AsheeigheColors.pastelPink.withOpacity(0.12),
+        hourMinuteColor: AsheeigheColors.pastelPink.withOpacity(0.12),
+        hourMinuteTextColor: AsheeigheColors.surfaceOnLight,
+        dayPeriodColor: AsheeigheColors.pastelPink.withOpacity(0.12),
+        dayPeriodTextColor: AsheeigheColors.surfaceOnLight,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
@@ -323,9 +323,9 @@ abstract final class PinkzTheme {
         dayPeriodShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),
-        hourMinuteTextStyle: PinkzTypography.textTheme.headlineMedium,
-        dayPeriodTextStyle: PinkzTypography.textTheme.titleMedium,
-        helpTextStyle: PinkzTypography.textTheme.bodyMedium,
+        hourMinuteTextStyle: AsheeigheTypography.textTheme.headlineMedium,
+        dayPeriodTextStyle: AsheeigheTypography.textTheme.titleMedium,
+        helpTextStyle: AsheeigheTypography.textTheme.bodyMedium,
       ),
 
       // ─── Divider ───────────────────────────────
@@ -337,9 +337,9 @@ abstract final class PinkzTheme {
 
       // ─── Progress Indicator ────────────────────
       progressIndicatorTheme: ProgressIndicatorThemeData(
-        color: PinkzColors.pastelPink,
-        linearTrackColor: PinkzColors.pastelPink.withOpacity(0.24),
-        circularTrackColor: PinkzColors.pastelPink.withOpacity(0.24),
+        color: AsheeigheColors.pastelPink,
+        linearTrackColor: AsheeigheColors.pastelPink.withOpacity(0.24),
+        circularTrackColor: AsheeigheColors.pastelPink.withOpacity(0.24),
       ),
 
       // ─── Menu / Popup ──────────────────────────
@@ -348,28 +348,28 @@ abstract final class PinkzTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
-        color: PinkzColors.creamWhite,
+        color: AsheeigheColors.creamWhite,
         surfaceTintColor: Colors.transparent,
-        textStyle: PinkzTypography.textTheme.bodyMedium,
+        textStyle: AsheeigheTypography.textTheme.bodyMedium,
       ),
 
       // ─── Navigation Bar (Material 3) ───────────
       navigationBarTheme: NavigationBarThemeData(
         elevation: 2,
-        backgroundColor: PinkzColors.creamWhite,
+        backgroundColor: AsheeigheColors.creamWhite,
         surfaceTintColor: Colors.transparent,
-        indicatorColor: PinkzColors.pastelPink.withOpacity(0.3),
+        indicatorColor: AsheeigheColors.pastelPink.withOpacity(0.3),
         labelTextStyle: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
-            return PinkzTypography.textTheme.labelMedium?.copyWith(
-              color: PinkzColors.pastelPink,
+            return AsheeigheTypography.textTheme.labelMedium?.copyWith(
+              color: AsheeigheColors.pastelPink,
             );
           }
-          return PinkzTypography.textTheme.labelSmall;
+          return AsheeigheTypography.textTheme.labelSmall;
         }),
         iconTheme: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
-            return IconThemeData(color: PinkzColors.pastelPink, size: 24);
+            return IconThemeData(color: AsheeigheColors.pastelPink, size: 24);
           }
           return const IconThemeData(color: Color(0xFF79747E), size: 24);
         }),
@@ -378,7 +378,7 @@ abstract final class PinkzTheme {
       // ─── Drawer ────────────────────────────────
       drawerTheme: DrawerThemeData(
         elevation: 8,
-        backgroundColor: PinkzColors.creamWhite,
+        backgroundColor: AsheeigheColors.creamWhite,
         surfaceTintColor: Colors.transparent,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -389,9 +389,9 @@ abstract final class PinkzTheme {
       ),
 
       extensions: const [
-        _PinkzGlassTheme(
-          surface: PinkzColors.glassLight,
-          stroke: PinkzColors.glassStrokeLight,
+        _AsheeigheGlassTheme(
+          surface: AsheeigheColors.glassLight,
+          stroke: AsheeigheColors.glassStrokeLight,
         ),
       ],
     );
@@ -399,29 +399,29 @@ abstract final class PinkzTheme {
 
   static ThemeData _buildDark() {
     final colorScheme = ColorScheme.dark(
-      primary: PinkzColors.darkPastelPink,
+      primary: AsheeigheColors.darkPastelPink,
       onPrimary: Colors.white,
-      primaryContainer: PinkzColors.darkSoftRose,
+      primaryContainer: AsheeigheColors.darkSoftRose,
       onPrimaryContainer: Colors.white,
-      secondary: PinkzColors.darkSoftLavender,
+      secondary: AsheeigheColors.darkSoftLavender,
       onSecondary: Colors.white,
-      secondaryContainer: PinkzColors.darkGentlePurple,
+      secondaryContainer: AsheeigheColors.darkGentlePurple,
       onSecondaryContainer: Colors.white,
-      tertiary: PinkzColors.darkMint,
+      tertiary: AsheeigheColors.darkMint,
       onTertiary: Colors.black87,
       error: const Color(0xFFEF9A9A),
       onError: Colors.black87,
       errorContainer: const Color(0xFF8B1A1A),
       onErrorContainer: const Color(0xFFFFDAD6),
-      surface: PinkzColors.surfaceDark,
-      onSurface: PinkzColors.surfaceOnDark,
-      surfaceContainerHighest: PinkzColors.surfaceContainerDark,
+      surface: AsheeigheColors.surfaceDark,
+      onSurface: AsheeigheColors.surfaceOnDark,
+      surfaceContainerHighest: AsheeigheColors.surfaceContainerDark,
       onSurfaceVariant: const Color(0xFFCAC4D0),
       outline: const Color(0xFF938F99),
       outlineVariant: const Color(0xFF49454F),
-      inverseSurface: PinkzColors.surfaceLight,
-      onInverseSurface: PinkzColors.surfaceOnLight,
-      inversePrimary: PinkzColors.pastelPink,
+      inverseSurface: AsheeigheColors.surfaceLight,
+      onInverseSurface: AsheeigheColors.surfaceOnLight,
+      inversePrimary: AsheeigheColors.pastelPink,
       shadow: Colors.black45,
       scrim: Colors.black54,
     );
@@ -429,9 +429,9 @@ abstract final class PinkzTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: colorScheme,
-      textTheme: PinkzTypography.textTheme.apply(
-        displayColor: PinkzColors.surfaceOnDark,
-        bodyColor: PinkzColors.surfaceOnDark,
+      textTheme: AsheeigheTypography.textTheme.apply(
+        displayColor: AsheeigheColors.surfaceOnDark,
+        bodyColor: AsheeigheColors.surfaceOnDark,
       ),
       brightness: Brightness.dark,
 
@@ -442,7 +442,7 @@ abstract final class PinkzTheme {
           borderRadius: BorderRadius.circular(20),
         ),
         clipBehavior: Clip.antiAlias,
-        color: PinkzColors.surfaceContainerDark,
+        color: AsheeigheColors.surfaceContainerDark,
         surfaceTintColor: Colors.transparent,
       ),
 
@@ -451,23 +451,23 @@ abstract final class PinkzTheme {
         scrolledUnderElevation: 1,
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        foregroundColor: PinkzColors.surfaceOnDark,
+        foregroundColor: AsheeigheColors.surfaceOnDark,
         surfaceTintColor: Colors.transparent,
-        titleTextStyle: PinkzTypography.textTheme.titleLarge?.copyWith(
+        titleTextStyle: AsheeigheTypography.textTheme.titleLarge?.copyWith(
           fontWeight: FontWeight.w600,
-          color: PinkzColors.surfaceOnDark,
+          color: AsheeigheColors.surfaceOnDark,
         ),
       ),
 
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         elevation: 8,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: PinkzColors.surfaceContainerDark,
-        selectedItemColor: PinkzColors.darkPastelPink,
+        backgroundColor: AsheeigheColors.surfaceContainerDark,
+        selectedItemColor: AsheeigheColors.darkPastelPink,
         unselectedItemColor: const Color(0xFF938F99),
-        selectedLabelStyle: PinkzTypography.textTheme.labelMedium,
-        unselectedLabelStyle: PinkzTypography.textTheme.labelSmall,
-        indicatorColor: PinkzColors.darkPastelPink.withOpacity(0.24),
+        selectedLabelStyle: AsheeigheTypography.textTheme.labelMedium,
+        unselectedLabelStyle: AsheeigheTypography.textTheme.labelSmall,
+        indicatorColor: AsheeigheColors.darkPastelPink.withOpacity(0.24),
       ),
 
       floatingActionButtonTheme: FloatingActionButtonThemeData(
@@ -476,14 +476,14 @@ abstract final class PinkzTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
-        backgroundColor: PinkzColors.darkPastelPink,
+        backgroundColor: AsheeigheColors.darkPastelPink,
         foregroundColor: Colors.white,
-        extendedTextStyle: PinkzTypography.textTheme.labelLarge,
+        extendedTextStyle: AsheeigheTypography.textTheme.labelLarge,
       ),
 
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: PinkzColors.surfaceContainerDark,
+        fillColor: AsheeigheColors.surfaceContainerDark,
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,
           vertical: 14,
@@ -499,7 +499,7 @@ abstract final class PinkzTheme {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(
-            color: PinkzColors.darkPastelPink,
+            color: AsheeigheColors.darkPastelPink,
             width: 2,
           ),
         ),
@@ -511,13 +511,13 @@ abstract final class PinkzTheme {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: Color(0xFFEF9A9A), width: 2),
         ),
-        labelStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
+        labelStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
           color: const Color(0xFFCAC4D0),
         ),
-        hintStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
+        hintStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
           color: const Color(0xFF938F99),
         ),
-        errorStyle: PinkzTypography.textTheme.bodySmall?.copyWith(
+        errorStyle: AsheeigheTypography.textTheme.bodySmall?.copyWith(
           color: const Color(0xFFEF9A9A),
         ),
       ),
@@ -529,8 +529,8 @@ abstract final class PinkzTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
-          textStyle: PinkzTypography.textTheme.labelLarge,
-          backgroundColor: PinkzColors.darkPastelPink,
+          textStyle: AsheeigheTypography.textTheme.labelLarge,
+          backgroundColor: AsheeigheColors.darkPastelPink,
           foregroundColor: Colors.white,
         ),
       ),
@@ -541,8 +541,8 @@ abstract final class PinkzTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
-          textStyle: PinkzTypography.textTheme.labelLarge,
-          backgroundColor: PinkzColors.darkPastelPink,
+          textStyle: AsheeigheTypography.textTheme.labelLarge,
+          backgroundColor: AsheeigheColors.darkPastelPink,
           foregroundColor: Colors.white,
         ),
       ),
@@ -553,9 +553,9 @@ abstract final class PinkzTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
-          textStyle: PinkzTypography.textTheme.labelLarge,
-          side: const BorderSide(color: PinkzColors.darkPastelPink),
-          foregroundColor: PinkzColors.surfaceOnDark,
+          textStyle: AsheeigheTypography.textTheme.labelLarge,
+          side: const BorderSide(color: AsheeigheColors.darkPastelPink),
+          foregroundColor: AsheeigheColors.surfaceOnDark,
         ),
       ),
 
@@ -565,8 +565,8 @@ abstract final class PinkzTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          textStyle: PinkzTypography.textTheme.labelLarge,
-          foregroundColor: PinkzColors.darkPastelPink,
+          textStyle: AsheeigheTypography.textTheme.labelLarge,
+          foregroundColor: AsheeigheColors.darkPastelPink,
         ),
       ),
 
@@ -576,10 +576,10 @@ abstract final class PinkzTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
-        labelStyle: PinkzTypography.textTheme.labelMedium,
-        secondaryLabelStyle: PinkzTypography.textTheme.labelMedium,
-        backgroundColor: PinkzColors.darkSoftLavender.withOpacity(0.2),
-        selectedColor: PinkzColors.darkPastelPink.withOpacity(0.3),
+        labelStyle: AsheeigheTypography.textTheme.labelMedium,
+        secondaryLabelStyle: AsheeigheTypography.textTheme.labelMedium,
+        backgroundColor: AsheeigheColors.darkSoftLavender.withOpacity(0.2),
+        selectedColor: AsheeigheColors.darkPastelPink.withOpacity(0.3),
         disabledColor: const Color(0xFF2B2930),
         surfaceTintColor: Colors.transparent,
         side: BorderSide.none,
@@ -593,21 +593,21 @@ abstract final class PinkzTheme {
         }),
         trackColor: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
-            return PinkzColors.darkPastelPink;
+            return AsheeigheColors.darkPastelPink;
           }
           return const Color(0xFF49454F);
         }),
       ),
 
       sliderTheme: SliderThemeData(
-        activeTrackColor: PinkzColors.darkPastelPink,
-        inactiveTrackColor: PinkzColors.darkPastelPink.withOpacity(0.24),
-        thumbColor: PinkzColors.darkPastelPink,
-        overlayColor: PinkzColors.darkPastelPink.withOpacity(0.12),
+        activeTrackColor: AsheeigheColors.darkPastelPink,
+        inactiveTrackColor: AsheeigheColors.darkPastelPink.withOpacity(0.24),
+        thumbColor: AsheeigheColors.darkPastelPink,
+        overlayColor: AsheeigheColors.darkPastelPink.withOpacity(0.12),
         activeTickMarkColor: Colors.white,
-        inactiveTickMarkColor: PinkzColors.darkPastelPink.withOpacity(0.5),
-        valueIndicatorColor: PinkzColors.darkPastelPink,
-        valueIndicatorTextStyle: PinkzTypography.textTheme.labelSmall?.copyWith(
+        inactiveTickMarkColor: AsheeigheColors.darkPastelPink.withOpacity(0.5),
+        valueIndicatorColor: AsheeigheColors.darkPastelPink,
+        valueIndicatorTextStyle: AsheeigheTypography.textTheme.labelSmall?.copyWith(
           color: Colors.black87,
         ),
       ),
@@ -617,13 +617,13 @@ abstract final class PinkzTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        backgroundColor: PinkzColors.surfaceContainerDark,
+        backgroundColor: AsheeigheColors.surfaceContainerDark,
         surfaceTintColor: Colors.transparent,
-        titleTextStyle: PinkzTypography.textTheme.headlineSmall?.copyWith(
-          color: PinkzColors.surfaceOnDark,
+        titleTextStyle: AsheeigheTypography.textTheme.headlineSmall?.copyWith(
+          color: AsheeigheColors.surfaceOnDark,
         ),
-        contentTextStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
-          color: PinkzColors.surfaceOnDark,
+        contentTextStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
+          color: AsheeigheColors.surfaceOnDark,
         ),
       ),
 
@@ -632,11 +632,11 @@ abstract final class PinkzTheme {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
         ),
-        backgroundColor: PinkzColors.surfaceContainerDark,
+        backgroundColor: AsheeigheColors.surfaceContainerDark,
         surfaceTintColor: Colors.transparent,
         showDragHandle: true,
         dragHandleColor: const Color(0xFF49454F),
-        modalBackgroundColor: PinkzColors.surfaceContainerDark,
+        modalBackgroundColor: AsheeigheColors.surfaceContainerDark,
         modalElevation: 8,
       ),
 
@@ -646,37 +646,37 @@ abstract final class PinkzTheme {
           borderRadius: BorderRadius.circular(14),
         ),
         insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        backgroundColor: PinkzColors.surfaceOnDark,
-        contentTextStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
-          color: PinkzColors.surfaceDark,
+        backgroundColor: AsheeigheColors.surfaceOnDark,
+        contentTextStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
+          color: AsheeigheColors.surfaceDark,
         ),
-        actionTextColor: PinkzColors.darkPastelPink,
+        actionTextColor: AsheeigheColors.darkPastelPink,
       ),
 
       tooltipTheme: TooltipThemeData(
         decoration: BoxDecoration(
-          color: PinkzColors.surfaceOnDark,
+          color: AsheeigheColors.surfaceOnDark,
           borderRadius: BorderRadius.circular(8),
         ),
-        textStyle: PinkzTypography.textTheme.bodySmall?.copyWith(
-          color: PinkzColors.surfaceDark,
+        textStyle: AsheeigheTypography.textTheme.bodySmall?.copyWith(
+          color: AsheeigheColors.surfaceDark,
         ),
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       ),
 
       datePickerTheme: DatePickerThemeData(
-        backgroundColor: PinkzColors.surfaceContainerDark,
+        backgroundColor: AsheeigheColors.surfaceContainerDark,
         surfaceTintColor: Colors.transparent,
-        headerBackgroundColor: PinkzColors.darkPastelPink,
+        headerBackgroundColor: AsheeigheColors.darkPastelPink,
         headerForegroundColor: Colors.white,
         todayForegroundColor: WidgetStateProperty.all(
-          PinkzColors.darkPastelPink,
+          AsheeigheColors.darkPastelPink,
         ),
         todayBackgroundColor: WidgetStateProperty.all(
-          PinkzColors.darkPastelPink.withOpacity(0.12),
+          AsheeigheColors.darkPastelPink.withOpacity(0.12),
         ),
         selectedDayBackgroundColor: WidgetStateProperty.all(
-          PinkzColors.darkPastelPink,
+          AsheeigheColors.darkPastelPink,
         ),
         selectedDayForegroundColor: WidgetStateProperty.all(Colors.white),
         dayShape: const WidgetStatePropertyAll(ContinuousRectangleBorder(
@@ -685,26 +685,26 @@ abstract final class PinkzTheme {
         yearShape: const WidgetStatePropertyAll(ContinuousRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(12)),
         )),
-        dayStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
-          color: PinkzColors.surfaceOnDark,
+        dayStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
+          color: AsheeigheColors.surfaceOnDark,
         ),
-        yearStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
-          color: PinkzColors.surfaceOnDark,
+        yearStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
+          color: AsheeigheColors.surfaceOnDark,
         ),
-        weekdayStyle: PinkzTypography.textTheme.labelMedium?.copyWith(
+        weekdayStyle: AsheeigheTypography.textTheme.labelMedium?.copyWith(
           color: const Color(0xFF938F99),
         ),
       ),
 
       timePickerTheme: TimePickerThemeData(
-        backgroundColor: PinkzColors.surfaceContainerDark,
+        backgroundColor: AsheeigheColors.surfaceContainerDark,
         surfaceTintColor: Colors.transparent,
-        dialHandColor: PinkzColors.darkPastelPink,
-        dialBackgroundColor: PinkzColors.darkPastelPink.withOpacity(0.12),
-        hourMinuteColor: PinkzColors.darkPastelPink.withOpacity(0.12),
-        hourMinuteTextColor: PinkzColors.surfaceOnDark,
-        dayPeriodColor: PinkzColors.darkPastelPink.withOpacity(0.12),
-        dayPeriodTextColor: PinkzColors.surfaceOnDark,
+        dialHandColor: AsheeigheColors.darkPastelPink,
+        dialBackgroundColor: AsheeigheColors.darkPastelPink.withOpacity(0.12),
+        hourMinuteColor: AsheeigheColors.darkPastelPink.withOpacity(0.12),
+        hourMinuteTextColor: AsheeigheColors.surfaceOnDark,
+        dayPeriodColor: AsheeigheColors.darkPastelPink.withOpacity(0.12),
+        dayPeriodTextColor: AsheeigheColors.surfaceOnDark,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
@@ -714,14 +714,14 @@ abstract final class PinkzTheme {
         dayPeriodShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),
-        hourMinuteTextStyle: PinkzTypography.textTheme.headlineMedium?.copyWith(
-          color: PinkzColors.surfaceOnDark,
+        hourMinuteTextStyle: AsheeigheTypography.textTheme.headlineMedium?.copyWith(
+          color: AsheeigheColors.surfaceOnDark,
         ),
-        dayPeriodTextStyle: PinkzTypography.textTheme.titleMedium?.copyWith(
-          color: PinkzColors.surfaceOnDark,
+        dayPeriodTextStyle: AsheeigheTypography.textTheme.titleMedium?.copyWith(
+          color: AsheeigheColors.surfaceOnDark,
         ),
-        helpTextStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
-          color: PinkzColors.surfaceOnDark,
+        helpTextStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
+          color: AsheeigheColors.surfaceOnDark,
         ),
       ),
 
@@ -732,9 +732,9 @@ abstract final class PinkzTheme {
       ),
 
       progressIndicatorTheme: ProgressIndicatorThemeData(
-        color: PinkzColors.darkPastelPink,
-        linearTrackColor: PinkzColors.darkPastelPink.withOpacity(0.24),
-        circularTrackColor: PinkzColors.darkPastelPink.withOpacity(0.24),
+        color: AsheeigheColors.darkPastelPink,
+        linearTrackColor: AsheeigheColors.darkPastelPink.withOpacity(0.24),
+        circularTrackColor: AsheeigheColors.darkPastelPink.withOpacity(0.24),
       ),
 
       popupMenuTheme: PopupMenuThemeData(
@@ -742,32 +742,32 @@ abstract final class PinkzTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
-        color: PinkzColors.surfaceContainerDark,
+        color: AsheeigheColors.surfaceContainerDark,
         surfaceTintColor: Colors.transparent,
-        textStyle: PinkzTypography.textTheme.bodyMedium?.copyWith(
-          color: PinkzColors.surfaceOnDark,
+        textStyle: AsheeigheTypography.textTheme.bodyMedium?.copyWith(
+          color: AsheeigheColors.surfaceOnDark,
         ),
       ),
 
       navigationBarTheme: NavigationBarThemeData(
         elevation: 2,
-        backgroundColor: PinkzColors.surfaceContainerDark,
+        backgroundColor: AsheeigheColors.surfaceContainerDark,
         surfaceTintColor: Colors.transparent,
-        indicatorColor: PinkzColors.darkPastelPink.withOpacity(0.3),
+        indicatorColor: AsheeigheColors.darkPastelPink.withOpacity(0.3),
         labelTextStyle: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
-            return PinkzTypography.textTheme.labelMedium?.copyWith(
-              color: PinkzColors.darkPastelPink,
+            return AsheeigheTypography.textTheme.labelMedium?.copyWith(
+              color: AsheeigheColors.darkPastelPink,
             );
           }
-          return PinkzTypography.textTheme.labelSmall?.copyWith(
+          return AsheeigheTypography.textTheme.labelSmall?.copyWith(
             color: const Color(0xFF938F99),
           );
         }),
         iconTheme: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
             return IconThemeData(
-              color: PinkzColors.darkPastelPink,
+              color: AsheeigheColors.darkPastelPink,
               size: 24,
             );
           }
@@ -777,7 +777,7 @@ abstract final class PinkzTheme {
 
       drawerTheme: DrawerThemeData(
         elevation: 8,
-        backgroundColor: PinkzColors.surfaceContainerDark,
+        backgroundColor: AsheeigheColors.surfaceContainerDark,
         surfaceTintColor: Colors.transparent,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -788,9 +788,9 @@ abstract final class PinkzTheme {
       ),
 
       extensions: const [
-        _PinkzGlassTheme(
-          surface: PinkzColors.glassDark,
-          stroke: PinkzColors.glassStrokeDark,
+        _AsheeigheGlassTheme(
+          surface: AsheeigheColors.glassDark,
+          stroke: AsheeigheColors.glassStrokeDark,
         ),
       ],
     );
@@ -800,36 +800,36 @@ abstract final class PinkzTheme {
 // ──────────────────────────────────────────────
 // Glassmorphism Theme Extension
 // ──────────────────────────────────────────────
-class _PinkzGlassTheme extends ThemeExtension<_PinkzGlassTheme> {
+class _AsheeigheGlassTheme extends ThemeExtension<_AsheeigheGlassTheme> {
   final Color surface;
   final Color stroke;
 
-  const _PinkzGlassTheme({
+  const _AsheeigheGlassTheme({
     required this.surface,
     required this.stroke,
   });
 
   @override
-  _PinkzGlassTheme copyWith({Color? surface, Color? stroke}) {
-    return _PinkzGlassTheme(
+  _AsheeigheGlassTheme copyWith({Color? surface, Color? stroke}) {
+    return _AsheeigheGlassTheme(
       surface: surface ?? this.surface,
       stroke: stroke ?? this.stroke,
     );
   }
 
   @override
-  _PinkzGlassTheme lerp(_PinkzGlassTheme? other, double t) {
+  _AsheeigheGlassTheme lerp(_AsheeigheGlassTheme? other, double t) {
     if (other == null) return this;
-    return _PinkzGlassTheme(
+    return _AsheeigheGlassTheme(
       surface: Color.lerp(surface, other.surface, t)!,
       stroke: Color.lerp(stroke, other.stroke, t)!,
     );
   }
 }
 
-extension PinkzGlassX on ThemeData {
+extension AsheeigheGlassX on ThemeData {
   Color get glassSurface =>
-      extension<_PinkzGlassTheme>()?.surface ?? PinkzColors.glassLight;
+      extension<_AsheeigheGlassTheme>()?.surface ?? AsheeigheColors.glassLight;
   Color get glassStroke =>
-      extension<_PinkzGlassTheme>()?.stroke ?? PinkzColors.glassStrokeLight;
+      extension<_AsheeigheGlassTheme>()?.stroke ?? AsheeigheColors.glassStrokeLight;
 }

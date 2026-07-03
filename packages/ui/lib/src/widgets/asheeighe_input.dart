@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../theme/pinkz_colors.dart';
+import '../theme/asheeighe_colors.dart';
 
-class PinkzInput extends StatefulWidget {
+class AsheeigheInput extends StatefulWidget {
   final String label;
   final String? hintText;
   final String? errorText;
@@ -21,7 +21,7 @@ class PinkzInput extends StatefulWidget {
   final FocusNode? focusNode;
   final EdgeInsetsGeometry? contentPadding;
 
-  const PinkzInput({
+  const AsheeigheInput({
     super.key,
     required this.label,
     this.hintText,
@@ -44,10 +44,10 @@ class PinkzInput extends StatefulWidget {
   });
 
   @override
-  State<PinkzInput> createState() => _PinkzInputState();
+  State<AsheeigheInput> createState() => _AsheeigheInputState();
 }
 
-class _PinkzInputState extends State<PinkzInput> {
+class _AsheeigheInputState extends State<AsheeigheInput> {
   late TextEditingController _controller;
   late FocusNode _focusNode;
   bool _hasFocus = false;

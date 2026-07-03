@@ -54,8 +54,8 @@ const PYTHON_LESSONS: TutorLesson[] = [
     description: 'Learn what programming is and why it matters.',
     type: 'concept',
     content: '## What is Programming?\n\nProgramming is giving instructions to a computer. Think of it like writing a recipe — step-by-step instructions that tell the computer exactly what to do.\n\n### Key Concepts\n- **Algorithm**: A step-by-step procedure to solve a problem\n- **Syntax**: The rules of writing code (like grammar in English)\n- **Bug**: An error in your code\n- **Debugging**: Finding and fixing bugs',
-    codeExample: '# Your first Python program!\nprint("Hello, World!")\nprint("Welcome to PINKZ Code Tutor!")',
-    expectedOutput: 'Hello, World!\nWelcome to PINKZ Code Tutor!',
+    codeExample: '# Your first Python program!\nprint("Hello, World!")\nprint("Welcome to asheeighe Code Tutor!")',
+    expectedOutput: 'Hello, World!\nWelcome to asheeighe Code Tutor!',
     hints: [
       'Think of print() as telling the computer to say something out loud.',
       'Everything inside the quotes is what will be displayed.',
@@ -164,8 +164,8 @@ const JAVASCRIPT_LESSONS: TutorLesson[] = [
     description: 'Introduction to the language of the web.',
     type: 'concept',
     content: '## JavaScript\n\nJavaScript makes websites interactive. It runs in every browser and on servers (Node.js).\n\n### Why JavaScript?\n- Runs everywhere (browser, server, mobile)\n- Huge ecosystem (npm)\n- Essential for web development',
-    codeExample: '// Your first JavaScript\nconsole.log("Hello, World!");\nconsole.log("Welcome to PINKZ!");',
-    expectedOutput: 'Hello, World!\nWelcome to PINKZ!',
+    codeExample: '// Your first JavaScript\nconsole.log("Hello, World!");\nconsole.log("Welcome to asheeighe!");',
+    expectedOutput: 'Hello, World!\nWelcome to asheeighe!',
     hints: [
       'console.log() is how JavaScript prints output.',
       'Every statement ends with a semicolon (;).',
@@ -201,8 +201,8 @@ const DART_LESSONS: TutorLesson[] = [
     description: 'Learn about Dart and why Flutter uses it.',
     type: 'concept',
     content: '## Dart Programming Language\n\nDart is the language behind Flutter. It\'s designed for building apps on any platform.\n\n### Why Dart?\n- Strongly typed (catches errors early)\n- AOT compilation for release builds\n- JIT compilation for fast development\n- Null safety built-in',
-    codeExample: 'void main() {\n  print("Hello, Flutter!");\n  String name = "PINKZ";\n  int age = 2;\n  print("$name is $age years old!");\n}',
-    expectedOutput: 'Hello, Flutter!\nPINKZ is 2 years old!',
+    codeExample: 'void main() {\n  print("Hello, Flutter!");\n  String name = "asheeighe";\n  int age = 2;\n  print("$name is $age years old!");\n}',
+    expectedOutput: 'Hello, Flutter!\nasheeighe is 2 years old!',
     hints: [
       'Dart programs start with void main().',
       'String interpolation uses $variable or ${expression}.',
@@ -222,7 +222,7 @@ const HTML_CSS_LESSONS: TutorLesson[] = [
     description: 'Build the skeleton of a web page.',
     type: 'concept',
     content: '## HTML Basics\n\nHTML (HyperText Markup Language) uses tags to structure content.\n\n### Common Tags\n- `<html>` — Root element\n- `<head>` — Metadata\n- `<body>` — Visible content\n- `<h1>` to `<h6>` — Headings\n- `<p>` — Paragraphs\n- `<a>` — Links',
-    codeExample: '<!DOCTYPE html>\n<html>\n<head>\n  <title>My Page</title>\n</head>\n<body>\n  <h1>Hello, World!</h1>\n  <p>Welcome to my website.</p>\n  <a href="https://pinkz.app">Visit PINKZ</a>\n</body>\n</html>',
+    codeExample: '<!DOCTYPE html>\n<html>\n<head>\n  <title>My Page</title>\n</head>\n<body>\n  <h1>Hello, World!</h1>\n  <p>Welcome to my website.</p>\n  <a href="https://asheeighe.app">Visit asheeighe</a>\n</body>\n</html>',
     hints: [
       'HTML tags come in pairs: opening <tag> and closing </tag>.',
       'The DOCTYPE declaration tells the browser this is HTML5.',

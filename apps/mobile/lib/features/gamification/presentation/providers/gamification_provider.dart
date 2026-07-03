@@ -219,7 +219,7 @@ class GamificationNotifier extends Notifier<GamificationState> {
         case 'life_architect':
           shouldUnlock = level >= 25;
           break;
-        case 'pinkz_legend':
+        case 'asheeighe_legend':
           shouldUnlock = level >= 50;
           break;
         case 'productivity_guru':

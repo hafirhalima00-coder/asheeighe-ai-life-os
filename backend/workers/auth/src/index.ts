@@ -3,8 +3,8 @@ import { cors } from 'hono/cors';
 import { z } from 'zod';
 import { zValidator } from '@hono/zod-validator';
 import jwt from 'jsonwebtoken';
-import { generateId } from '@pinkz/core/utils';
-import { AuthError, ConflictError } from '@pinkz/core/errors';
+import { generateId } from '@asheeighe/core/utils';
+import { AuthError, ConflictError } from '@asheeighe/core/errors';
 
 interface Env {
   Bindings: {
@@ -18,7 +18,7 @@ interface Env {
 const app = new Hono<{ Bindings: Env['Bindings'] }>();
 
 app.use('*', cors({
-  origin: ['http://localhost:5173', 'https://pinkz.app'],
+  origin: ['http://localhost:5173', 'https://asheeighe.app'],
   credentials: true,
 }));
 

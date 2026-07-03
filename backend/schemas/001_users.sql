@@ -1,4 +1,4 @@
--- Users table for PINKZ
+-- Users table for asheeighe
 -- Stores core user identity and profile information
 CREATE TABLE IF NOT EXISTS users (
   id TEXT PRIMARY KEY,

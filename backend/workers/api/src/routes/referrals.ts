@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { ReferralService } from '@pinkz/social';
+import { ReferralService } from '@asheeighe/social';
 
 const referrals = new Hono();
 

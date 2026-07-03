@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-abstract final class PinkzColors {
-  PinkzColors._();
+abstract final class AsheeigheColors {
+  AsheeigheColors._();
 
   // ──────────────────────────────────────────────
   // Primary Pastel Palette

@@ -119,7 +119,7 @@ class _ReferralScreenState extends ConsumerState<ReferralScreen> {
           ),
           const SizedBox(height: 16),
           Text(
-            'Share PINKZ with Friends',
+            'Share asheeighe with Friends',
             style: AppTextStyles.headlineSmall.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -274,7 +274,7 @@ class _ReferralScreenState extends ConsumerState<ReferralScreen> {
           value: 1,
           description: 'Lifetime Pro access',
         ),
-        title: 'PINKZ Ambassador',
+        title: 'asheeighe Ambassador',
         description: 'Invite 25 friends',
       ),
     ];
@@ -542,7 +542,7 @@ class _ReferralScreenState extends ConsumerState<ReferralScreen> {
 
     if (code == null || link == null) return;
 
-    String shareText = 'Join me on PINKZ - your AI Life OS! 🌸\n\n';
+    String shareText = 'Join me on asheeighe - your AI Life OS! 🌸\n\n';
     shareText += 'Use my referral code: $code\n\n';
     shareText += link;
 

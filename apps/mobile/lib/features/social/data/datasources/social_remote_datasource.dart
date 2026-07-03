@@ -206,7 +206,7 @@ class SocialRemoteDataSourceImpl implements SocialRemoteDataSource {
     if (existing != null) return existing['code'];
 
     // Generate unique code
-    final code = 'PINKZ-${_generateRandomCode(6)}';
+    final code = 'ASHEEIGHE-${_generateRandomCode(6)}';
 
     await _supabase.from('referral_codes').insert({
       'user_id': userId,
@@ -220,7 +220,7 @@ class SocialRemoteDataSourceImpl implements SocialRemoteDataSource {
   @override
   Future<String> getReferralLink() async {
     final code = await generateReferralCode();
-    return 'https://pinkz.app/join/$code';
+    return 'https://asheeighe.app/join/$code';
   }
 
   @override
@@ -296,7 +296,7 @@ class SocialRemoteDataSourceImpl implements SocialRemoteDataSource {
   @override
   Future<String> getShareMessage() async {
     final link = await getReferralLink();
-    return 'Join me on PINKZ - your AI Life OS! 🌸\n\nUse my referral link: $link\n\nWe both get rewards!';
+    return 'Join me on asheeighe - your AI Life OS! 🌸\n\nUse my referral link: $link\n\nWe both get rewards!';
   }
 
   @override
@@ -309,7 +309,7 @@ class SocialRemoteDataSourceImpl implements SocialRemoteDataSource {
     final userId = _supabase.auth.currentUser?.id;
     if (userId == null) throw Exception('User not authenticated');
 
-    final shareUrl = 'https://pinkz.app/share/$userId/${DateTime.now().millisecondsSinceEpoch}';
+    final shareUrl = 'https://asheeighe.app/share/$userId/${DateTime.now().millisecondsSinceEpoch}';
 
     final achievement = await _supabase.from('shared_achievements').insert({
       'user_id': userId,
@@ -359,7 +359,7 @@ class SocialRemoteDataSourceImpl implements SocialRemoteDataSource {
     final userId = _supabase.auth.currentUser?.id;
     if (userId == null) throw Exception('User not authenticated');
 
-    final baseUrl = 'https://pinkz.app/share/$userId';
+    final baseUrl = 'https://asheeighe.app/share/$userId';
     return achievementId != null ? '$baseUrl?achievement=$achievementId' : baseUrl;
   }
 
@@ -379,7 +379,7 @@ class SocialRemoteDataSourceImpl implements SocialRemoteDataSource {
       {'required_referrals': 3, 'title': 'Growing Circle', 'reward': {'type': 'pro_week', 'value': 14, 'description': '2 weeks of Pro free'}},
       {'required_referrals': 5, 'title': 'Popular Host', 'reward': {'type': 'pro_month', 'value': 1, 'description': '1 month of Pro free'}},
       {'required_referrals': 10, 'title': 'Influencer', 'reward': {'type': 'pro_month', 'value': 3, 'description': '3 months of Pro free'}},
-      {'required_referrals': 25, 'title': 'PINKZ Ambassador', 'reward': {'type': 'lifetime_pro', 'value': 1, 'description': 'Lifetime Pro access'}},
+      {'required_referrals': 25, 'title': 'asheeighe Ambassador', 'reward': {'type': 'lifetime_pro', 'value': 1, 'description': 'Lifetime Pro access'}},
     ];
 
     for (final milestone in milestones) {

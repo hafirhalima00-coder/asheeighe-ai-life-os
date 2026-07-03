@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/dashboard/data/models/dashboard_data_model.dart';
-import 'package:pinkz/features/dashboard/domain/entities/dashboard_data.dart';
+import 'package:asheeighe/features/dashboard/data/models/dashboard_data_model.dart';
+import 'package:asheeighe/features/dashboard/domain/entities/dashboard_data.dart';
 
 void main() {
   group('DashboardDataModel', () {

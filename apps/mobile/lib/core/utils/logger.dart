@@ -46,7 +46,7 @@ class AppLogger {
   static const WarningLevel warning = WarningLevel();
   static const ErrorLevel error = ErrorLevel();
 
-  static const String _appName = 'PINKZ';
+  static const String _appName = 'asheeighe';
   static LogLevel _minLevel = const DebugLevel();
 
   static void setMinLevel(LogLevel level) {

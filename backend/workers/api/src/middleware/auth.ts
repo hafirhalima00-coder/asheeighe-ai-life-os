@@ -1,9 +1,9 @@
 import type { MiddlewareHandler } from 'hono';
 import jwt from 'jsonwebtoken';
 import type { AppEnv } from '../types';
-import { AuthError } from '@pinkz/core/errors';
-import { createDB } from '@pinkz/db';
-import type { User } from '@pinkz/core';
+import { AuthError } from '@asheeighe/core/errors';
+import { createDB } from '@asheeighe/db';
+import type { User } from '@asheeighe/core';
 
 interface JwtPayload {
   sub: string;

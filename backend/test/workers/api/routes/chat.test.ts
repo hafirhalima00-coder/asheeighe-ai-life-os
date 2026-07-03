@@ -18,8 +18,8 @@ function createMockEnv() {
   };
 }
 
-vi.mock('@pinkz/db', () => ({ createDB: vi.fn() }));
-vi.mock('@pinkz/ai', () => ({
+vi.mock('@asheeighe/db', () => ({ createDB: vi.fn() }));
+vi.mock('@asheeighe/ai', () => ({
   createAIProvider: vi.fn(() => ({
     chat: vi.fn().mockResolvedValue({
       id: 'resp-1',
@@ -33,14 +33,14 @@ vi.mock('@pinkz/ai', () => ({
     type: 'openai',
   })),
 }));
-vi.mock('@pinkz/workers/api/src/services/skill-registry', () => ({
+vi.mock('@asheeighe/workers/api/src/services/skill-registry', () => ({
   SkillRegistry: vi.fn(() => ({
     detectAndExecute: vi.fn().mockResolvedValue(null),
   })),
 }));
 
 async function setup() {
-  const { default: chatRoutes } = await import('@pinkz/workers/api/src/routes/chat');
+  const { default: chatRoutes } = await import('@asheeighe/workers/api/src/routes/chat');
   const app = new Hono<any>();
   app.route('/', chatRoutes);
   return app;
@@ -91,7 +91,7 @@ describe('Chat Routes', () => {
   });
 
   it('POST / - returns error when provider not available', async () => {
-    const { createAIProvider } = await import('@pinkz/ai');
+    const { createAIProvider } = await import('@asheeighe/ai');
     (createAIProvider as any).mockReturnValueOnce({
       chat: vi.fn(),
       chatStream: vi.fn(),

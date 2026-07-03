@@ -34,7 +34,7 @@ class AuthNotifier extends _$AuthNotifier {
   @override
   FutureOr<AuthState> build() async {
     final secureStorage = ref.watch(secureStorageProvider);
-    final hiveBox = await Hive.openBox('pinkz_box');
+    final hiveBox = await Hive.openBox('asheeighe_box');
     final apiClient = ref.watch(apiClientProvider);
 
     final localDataSource = AuthLocalDataSource(secureStorage, hiveBox);

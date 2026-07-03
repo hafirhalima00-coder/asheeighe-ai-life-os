@@ -21,10 +21,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@pinkz/core': path.resolve(__dirname, './packages/core/src'),
-      '@pinkz/ai': path.resolve(__dirname, './packages/ai/src'),
-      '@pinkz/db': path.resolve(__dirname, './packages/db/src'),
-      '@pinkz/composio-client': path.resolve(__dirname, './packages/composio-client/src'),
+      '@asheeighe/core': path.resolve(__dirname, './packages/core/src'),
+      '@asheeighe/ai': path.resolve(__dirname, './packages/ai/src'),
+      '@asheeighe/db': path.resolve(__dirname, './packages/db/src'),
+      '@asheeighe/composio-client': path.resolve(__dirname, './packages/composio-client/src'),
     },
   },
 });

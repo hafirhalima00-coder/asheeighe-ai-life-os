@@ -117,7 +117,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
                   ),
                   const SizedBox(height: 24),
                   Text(
-                    'PINKZ',
+                    'asheeighe',
                     style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: const Color(0xFF1A1A2E),

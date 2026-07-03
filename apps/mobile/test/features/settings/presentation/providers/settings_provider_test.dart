@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:pinkz/core/errors/failures.dart';
-import 'package:pinkz/features/settings/domain/entities/app_settings.dart';
-import 'package:pinkz/features/settings/domain/repositories/settings_repository.dart';
-import 'package:pinkz/features/settings/domain/usecases/get_settings_usecase.dart';
-import 'package:pinkz/features/settings/domain/usecases/reset_settings_usecase.dart';
-import 'package:pinkz/features/settings/domain/usecases/update_settings_usecase.dart';
-import 'package:pinkz/features/settings/presentation/providers/settings_provider.dart';
+import 'package:asheeighe/core/errors/failures.dart';
+import 'package:asheeighe/features/settings/domain/entities/app_settings.dart';
+import 'package:asheeighe/features/settings/domain/repositories/settings_repository.dart';
+import 'package:asheeighe/features/settings/domain/usecases/get_settings_usecase.dart';
+import 'package:asheeighe/features/settings/domain/usecases/reset_settings_usecase.dart';
+import 'package:asheeighe/features/settings/domain/usecases/update_settings_usecase.dart';
+import 'package:asheeighe/features/settings/presentation/providers/settings_provider.dart';
 
 class MockGetSettingsUseCase extends Mock implements GetSettingsUseCase {}
 

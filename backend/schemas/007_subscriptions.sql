@@ -1,48 +1,43 @@
-CREATE TABLE subscriptions (
+CREATE TABLE IF NOT EXISTS subscriptions (
   id TEXT PRIMARY KEY,
-  userId TEXT NOT NULL UNIQUE,
-  planId TEXT NOT NULL DEFAULT 'FREE',
+  user_id TEXT NOT NULL UNIQUE,
+  plan_id TEXT NOT NULL DEFAULT 'FREE',
   status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'canceled', 'trialing', 'past_due', 'incomplete')),
-  currentPeriodStart TIMESTAMP WITH TIME ZONE,
-  currentPeriodEnd TIMESTAMP WITH TIME ZONE,
-  stripeSubscriptionId TEXT,
-  stripeCustomerId TEXT,
-  cancelAt TIMESTAMP WITH TIME ZONE,
-  createdAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
-  updatedAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
+  current_period_start TEXT,
+  current_period_end TEXT,
+  stripe_subscription_id TEXT,
+  stripe_customer_id TEXT,
+  cancel_at TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
-CREATE INDEX idx_subscriptions_userId ON subscriptions(userId);
-CREATE INDEX idx_subscriptions_stripeSubscriptionId ON subscriptions(stripeSubscriptionId);
-CREATE INDEX idx_subscriptions_status ON subscriptions(status);
+CREATE INDEX IF NOT EXISTS idx_subscriptions_user ON subscriptions(user_id);
+CREATE INDEX IF NOT EXISTS idx_subscriptions_stripe ON subscriptions(stripe_subscription_id);
+CREATE INDEX IF NOT EXISTS idx_subscriptions_status ON subscriptions(status);
 
-CREATE TABLE payments (
+CREATE TABLE IF NOT EXISTS payments (
   id TEXT PRIMARY KEY,
-  userId TEXT NOT NULL,
-  subscriptionId TEXT NOT NULL,
+  user_id TEXT NOT NULL,
+  subscription_id TEXT NOT NULL,
   amount INTEGER NOT NULL,
   currency TEXT NOT NULL DEFAULT 'usd',
   status TEXT NOT NULL CHECK (status IN ('succeeded', 'pending', 'failed', 'refunded')),
-  stripePaymentId TEXT,
-  createdAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
+  stripe_payment_id TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
-CREATE INDEX idx_payments_userId ON payments(userId);
-CREATE INDEX idx_payments_subscriptionId ON payments(subscriptionId);
-CREATE INDEX idx_payments_createdAt ON payments(createdAt);
+CREATE INDEX IF NOT EXISTS idx_payments_user ON payments(user_id);
+CREATE INDEX IF NOT EXISTS idx_payments_subscription ON payments(subscription_id);
 
-CREATE TABLE usage_tracking (
+CREATE TABLE IF NOT EXISTS usage_tracking (
   id TEXT PRIMARY KEY,
-  userId TEXT NOT NULL,
+  user_id TEXT NOT NULL,
   feature TEXT NOT NULL,
   count INTEGER NOT NULL DEFAULT 1,
-  date DATE NOT NULL DEFAULT CURRENT_DATE,
-  createdAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
+  date TEXT NOT NULL DEFAULT (date('now')),
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
-CREATE UNIQUE INDEX idx_usage_tracking_unique ON usage_tracking(userId, feature, date);
-CREATE INDEX idx_usage_tracking_userId ON usage_tracking(userId);
-CREATE INDEX idx_usage_tracking_date ON usage_tracking(date);
-
--- Seed default free subscription for all users
--- INSERT INTO subscriptions (id, userId, planId, status) SELECT 'free_' || id, id, 'FREE', 'active' FROM users ON CONFLICT DO NOTHING;
+CREATE UNIQUE INDEX IF NOT EXISTS idx_usage_unique ON usage_tracking(user_id, feature, date);
+CREATE INDEX IF NOT EXISTS idx_usage_user ON usage_tracking(user_id);

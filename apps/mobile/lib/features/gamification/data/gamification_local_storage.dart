@@ -222,8 +222,8 @@ class GamificationLocalStorage {
       rarity: BadgeRarity.epic,
     ),
     Badge(
-      id: 'pinkz_legend',
-      name: 'PINKZ Legend',
+      id: 'asheeighe_legend',
+      name: 'Asheeighe Legend',
       description: 'Reach level 50',
       icon: '👑',
       category: BadgeCategory.milestone,

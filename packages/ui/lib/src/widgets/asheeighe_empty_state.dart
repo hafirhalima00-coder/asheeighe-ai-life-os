@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../theme/pinkz_colors.dart';
+import '../theme/asheeighe_colors.dart';
 
-class PinkzEmptyState extends StatelessWidget {
+class AsheeigheEmptyState extends StatelessWidget {
   final IconData icon;
   final String title;
   final String? subtitle;
@@ -10,7 +10,7 @@ class PinkzEmptyState extends StatelessWidget {
   final VoidCallback? onAction;
   final Widget? illustration;
 
-  const PinkzEmptyState({
+  const AsheeigheEmptyState({
     super.key,
     this.icon = Icons.inbox_outlined,
     required this.title,

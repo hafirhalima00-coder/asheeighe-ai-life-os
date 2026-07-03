@@ -12,12 +12,12 @@ import chatRoutes from './routes/chat';
 import composioRoutes from './routes/composio';
 import usersRoutes from './routes/users';
 import type { AppEnv } from './types';
-import { handleError, isAppError } from '@pinkz/core/errors';
+import { handleError, isAppError } from '@asheeighe/core/errors';
 
 const app = new Hono<AppEnv>();
 
 app.use('*', cors({
-  origin: ['http://localhost:5173', 'https://pinkz.app'],
+  origin: ['http://localhost:5173', 'https://asheeighe.app'],
   credentials: true,
   allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowHeaders: ['Content-Type', 'Authorization'],
@@ -30,7 +30,7 @@ app.use('*', rateLimitMiddleware);
 app.get('/health', (c) => {
   return c.json({
     success: true,
-    message: 'PINKZ API is running',
+    message: 'asheeighe API is running',
     timestamp: new Date().toISOString(),
     version: '1.0.0',
   });

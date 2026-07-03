@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/core/errors/app_exceptions.dart';
+import 'package:asheeighe/core/errors/app_exceptions.dart';
 
 void main() {
   group('AppException', () {

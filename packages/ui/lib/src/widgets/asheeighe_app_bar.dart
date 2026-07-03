@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../theme/pinkz_colors.dart';
+import '../theme/asheeighe_colors.dart';
 
-class PinkzAppBar extends StatelessWidget implements PreferredSizeWidget {
+class AsheeigheAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final List<Widget>? actions;
   final Widget? leading;
@@ -16,7 +16,7 @@ class PinkzAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? titleWidget;
   final bool automaticallyImplyLeading;
 
-  const PinkzAppBar({
+  const AsheeigheAppBar({
     super.key,
     required this.title,
     this.actions,
@@ -43,7 +43,7 @@ class PinkzAppBar extends StatelessWidget implements PreferredSizeWidget {
 
     final effectiveBackground = backgroundColor ??
         (glass
-            ? (isDark ? PinkzColors.glassDark : PinkzColors.glassLight)
+            ? (isDark ? AsheeigheColors.glassDark : AsheeigheColors.glassLight)
             : Colors.transparent);
 
     final effectiveElevation = glass ? 0 : elevation;

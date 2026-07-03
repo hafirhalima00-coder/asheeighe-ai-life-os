@@ -184,7 +184,7 @@ export class SharingService {
   }
 
   async getShareUrl(userId: string, achievementId?: string): Promise<string> {
-    const baseUrl = `https://pinkz.app/share/${userId}`;
+    const baseUrl = `https://asheeighe.app/share/${userId}`;
     return achievementId ? `${baseUrl}?achievement=${achievementId}` : baseUrl;
   }
 
@@ -237,7 +237,7 @@ export class SharingService {
   private generateShareUrl(userId: string): string {
     const timestamp = Date.now().toString(36);
     const random = Math.random().toString(36).substring(2, 8);
-    return `https://pinkz.app/share/${userId}/${timestamp}${random}`;
+    return `https://asheeighe.app/share/${userId}/${timestamp}${random}`;
   }
 
   private async generateShareImage(
@@ -248,7 +248,7 @@ export class SharingService {
   ): Promise<string> {
     // In production, this would generate an image using a service like
     // Cloudflare Images or a canvas library
-    const imageUrl = `https://pinkz.app/api/share-image?userId=${userId}&type=${type}&title=${encodeURIComponent(title)}&color=${data.color || 'FF6B9D'}`;
+    const imageUrl = `https://asheeighe.app/api/share-image?userId=${userId}&type=${type}&title=${encodeURIComponent(title)}&color=${data.color || 'FF6B9D'}`;
     return imageUrl;
   }
 
@@ -290,7 +290,7 @@ interface PublicProfile {
 
 export function generateShareText(achievement: SharedAchievement): string {
   const emoji = getAchievementEmoji(achievement.type);
-  return `${emoji} ${achievement.title}\n\n${achievement.description}\n\nCheck out my progress on PINKZ! 🌸\n${achievement.shareUrl}`;
+  return `${emoji} ${achievement.title}\n\n${achievement.description}\n\nCheck out my progress on asheeighe! 🌸\n${achievement.shareUrl}`;
 }
 
 function getAchievementEmoji(type: AchievementType): string {

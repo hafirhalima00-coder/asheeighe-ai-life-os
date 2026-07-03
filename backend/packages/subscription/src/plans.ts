@@ -27,7 +27,7 @@ export const PLANS: Record<PlanId, PlanDefinition> = {
   PRO_MONTHLY: {
     id: 'PRO_MONTHLY',
     name: 'Pro',
-    description: 'Unlock the full PINKZ experience',
+    description: 'Unlock the full asheeighe experience',
     price: 999,
     yearlyPrice: 7999,
     features: [
@@ -45,7 +45,7 @@ export const PLANS: Record<PlanId, PlanDefinition> = {
   PRO_YEARLY: {
     id: 'PRO_YEARLY',
     name: 'Pro',
-    description: 'Unlock the full PINKZ experience',
+    description: 'Unlock the full asheeighe experience',
     price: 999,
     yearlyPrice: 7999,
     features: [

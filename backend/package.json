@@ -1,5 +1,5 @@
 {
-  "name": "pinkz-backend",
+  "name": "asheeighe-backend",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -12,7 +12,7 @@
     "deploy:auth": "wrangler deploy --config workers/auth/wrangler.jsonc",
     "deploy:composio": "wrangler deploy --config workers/composio/wrangler.jsonc",
     "deploy:sync": "wrangler deploy --config workers/sync/wrangler.jsonc",
-    "db:migrate": "wrangler d1 migrations apply pinkz-db",
+    "db:migrate": "wrangler d1 migrations apply asheeighe-db",
     "db:generate": "wrangler d1 migrations create",
     "test": "vitest run",
     "test:watch": "vitest",

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PinkzSectionHeader extends StatelessWidget {
+class AsheeigheSectionHeader extends StatelessWidget {
   final String title;
   final String? subtitle;
   final String? actionLabel;
@@ -10,7 +10,7 @@ class PinkzSectionHeader extends StatelessWidget {
   final TextStyle? subtitleStyle;
   final EdgeInsetsGeometry? padding;
 
-  const PinkzSectionHeader({
+  const AsheeigheSectionHeader({
     super.key,
     required this.title,
     this.subtitle,

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../theme/pinkz_colors.dart';
+import '../theme/asheeighe_colors.dart';
 
-class PinkzLoadingShimmer extends StatelessWidget {
+class AsheeigheLoadingShimmer extends StatelessWidget {
   final double height;
   final double width;
   final double borderRadius;
   final EdgeInsetsGeometry? margin;
 
-  const PinkzLoadingShimmer({
+  const AsheeigheLoadingShimmer({
     super.key,
     this.height = 16,
     this.width = double.infinity,
@@ -39,11 +39,11 @@ class PinkzLoadingShimmer extends StatelessWidget {
   }
 }
 
-class PinkzCardShimmer extends StatelessWidget {
+class AsheeigheCardShimmer extends StatelessWidget {
   final int lines;
   final bool hasAvatar;
 
-  const PinkzCardShimmer({
+  const AsheeigheCardShimmer({
     super.key,
     this.lines = 3,
     this.hasAvatar = false,
@@ -62,7 +62,7 @@ class PinkzCardShimmer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (hasAvatar) ...[
-            const PinkzLoadingShimmer(
+            const AsheeigheLoadingShimmer(
               width: 48,
               height: 48,
               borderRadius: 24,
@@ -73,13 +73,13 @@ class PinkzCardShimmer extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const PinkzLoadingShimmer(width: 180),
+                const AsheeigheLoadingShimmer(width: 180),
                 const SizedBox(height: 8),
                 ...List.generate(
                   lines - 1,
                   (i) => const Padding(
                     padding: EdgeInsets.only(top: 6),
-                    child: PinkzLoadingShimmer(),
+                    child: AsheeigheLoadingShimmer(),
                   ),
                 ),
               ],
@@ -91,12 +91,12 @@ class PinkzCardShimmer extends StatelessWidget {
   }
 }
 
-class PinkzLoadingSpinner extends StatelessWidget {
+class AsheeigheLoadingSpinner extends StatelessWidget {
   final double size;
   final Color? color;
   final String? message;
 
-  const PinkzLoadingSpinner({
+  const AsheeigheLoadingSpinner({
     super.key,
     this.size = 36,
     this.color,
@@ -135,15 +135,15 @@ class PinkzLoadingSpinner extends StatelessWidget {
   }
 }
 
-class PinkzPageLoading extends StatelessWidget {
+class AsheeighePageLoading extends StatelessWidget {
   final String? message;
 
-  const PinkzPageLoading({super.key, this.message});
+  const AsheeighePageLoading({super.key, this.message});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: PinkzLoadingSpinner(),
+      body: AsheeigheLoadingSpinner(),
     );
   }
 }

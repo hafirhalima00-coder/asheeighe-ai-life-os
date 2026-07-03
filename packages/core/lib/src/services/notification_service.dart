@@ -42,9 +42,9 @@ class NotificationService {
     String? payload,
   }) async {
     const androidDetails = AndroidNotificationDetails(
-      'pinkz_channel',
-      'Pinkz Notifications',
-      channelDescription: 'Notifications from Pinkz',
+      'asheeighe_channel',
+      'Asheeighe Notifications',
+      channelDescription: 'Notifications from Asheeighe',
       importance: Importance.high,
       priority: Priority.high,
     );
@@ -73,9 +73,9 @@ class NotificationService {
     String? payload,
   }) async {
     const androidDetails = AndroidNotificationDetails(
-      'pinkz_channel',
-      'Pinkz Notifications',
-      channelDescription: 'Notifications from Pinkz',
+      'asheeighe_channel',
+      'Asheeighe Notifications',
+      channelDescription: 'Notifications from Asheeighe',
       importance: Importance.high,
       priority: Priority.high,
     );

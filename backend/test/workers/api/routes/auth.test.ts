@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { Hono } from 'hono';
-import type { AppEnv } from '@pinkz/workers/api/src/types';
+import type { AppEnv } from '@asheeighe/workers/api/src/types';
 
-vi.mock('@pinkz/db', () => ({
+vi.mock('@asheeighe/db', () => ({
   createDB: vi.fn(() => ({
     userExists: vi.fn(),
     createUser: vi.fn(),
@@ -49,13 +49,13 @@ describe('Auth Routes', () => {
     vi.clearAllMocks();
     mockEnv = createMockEnv();
     app = new Hono<AppEnv>();
-    const authModule = vi.mocked(require('@pinkz/workers/api/src/routes/auth'));
+    const authModule = vi.mocked(require('@asheeighe/workers/api/src/routes/auth'));
     app.route('/auth', authModule.default);
   });
 
   describe('POST /auth/register', () => {
     it('registers a new user successfully', async () => {
-      const { createDB } = await import('@pinkz/db');
+      const { createDB } = await import('@asheeighe/db');
       const mockDb = createDB({} as any);
       (mockDb.userExists as any).mockResolvedValue(false);
       (mockDb.createUser as any).mockResolvedValue({ id: 'user-1', email: 'test@test.com', displayName: 'Test' });
@@ -72,7 +72,7 @@ describe('Auth Routes', () => {
     });
 
     it('returns 409 for duplicate email', async () => {
-      const { createDB } = await import('@pinkz/db');
+      const { createDB } = await import('@asheeighe/db');
       const mockDb = createDB({} as any);
       (mockDb.userExists as any).mockResolvedValue(true);
 
@@ -108,7 +108,7 @@ describe('Auth Routes', () => {
 
   describe('POST /auth/login', () => {
     it('logs in successfully', async () => {
-      const { createDB } = await import('@pinkz/db');
+      const { createDB } = await import('@asheeighe/db');
       const mockDb = createDB({} as any);
       (mockDb.findByEmail as any).mockResolvedValue({
         id: 'user-1',
@@ -126,7 +126,7 @@ describe('Auth Routes', () => {
     });
 
     it('returns 401 for wrong password', async () => {
-      const { createDB } = await import('@pinkz/db');
+      const { createDB } = await import('@asheeighe/db');
       const mockDb = createDB({} as any);
       (mockDb.findByEmail as any).mockResolvedValue({
         id: 'user-1',
@@ -144,7 +144,7 @@ describe('Auth Routes', () => {
     });
 
     it('returns 401 for non-existent user', async () => {
-      const { createDB } = await import('@pinkz/db');
+      const { createDB } = await import('@asheeighe/db');
       const mockDb = createDB({} as any);
       (mockDb.findByEmail as any).mockResolvedValue(null);
 
@@ -162,7 +162,7 @@ describe('Auth Routes', () => {
     it('refreshes token successfully', async () => {
       const jwt = await import('jsonwebtoken');
       (jwt.default.verify as any).mockReturnValue({ sub: 'user-1', email: 'test@test.com', type: 'refresh' });
-      const { createDB } = await import('@pinkz/db');
+      const { createDB } = await import('@asheeighe/db');
       const mockDb = createDB({} as any);
       (mockDb.findById as any).mockResolvedValue({ id: 'user-1', email: 'test@test.com' });
 

@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:pinkz/core/errors/failures.dart';
-import 'package:pinkz/features/auth/domain/repositories/auth_repository.dart';
-import 'package:pinkz/features/auth/domain/usecases/logout_usecase.dart';
+import 'package:asheeighe/core/errors/failures.dart';
+import 'package:asheeighe/features/auth/domain/repositories/auth_repository.dart';
+import 'package:asheeighe/features/auth/domain/usecases/logout_usecase.dart';
 
 class MockAuthRepository extends Mock implements AuthRepository {}
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PinkzAnimatedContainer extends StatelessWidget {
+class AsheeigheAnimatedContainer extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry? margin;
@@ -12,7 +12,7 @@ class PinkzAnimatedContainer extends StatelessWidget {
   final Decoration? decoration;
   final bool animate;
 
-  const PinkzAnimatedContainer({
+  const AsheeigheAnimatedContainer({
     super.key,
     required this.child,
     this.padding,

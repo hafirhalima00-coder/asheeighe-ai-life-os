@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/auth/data/models/register_request.dart';
+import 'package:asheeighe/features/auth/data/models/register_request.dart';
 
 void main() {
   group('RegisterRequest', () {

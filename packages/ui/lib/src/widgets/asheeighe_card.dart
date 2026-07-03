@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../theme/pinkz_colors.dart';
+import '../theme/asheeighe_colors.dart';
 
-class PinkzCard extends StatelessWidget {
+class AsheeigheCard extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry? margin;
@@ -15,7 +15,7 @@ class PinkzCard extends StatelessWidget {
   final VoidCallback? onTap;
   final Clip clipBehavior;
 
-  const PinkzCard({
+  const AsheeigheCard({
     super.key,
     required this.child,
     this.padding,
@@ -37,7 +37,7 @@ class PinkzCard extends StatelessWidget {
 
     final effectiveColor = color ??
         (glassmorphism
-            ? (isDark ? PinkzColors.glassDark : PinkzColors.glassLight)
+            ? (isDark ? AsheeigheColors.glassDark : AsheeigheColors.glassLight)
             : theme.cardTheme.color);
 
     final effectiveElevation =

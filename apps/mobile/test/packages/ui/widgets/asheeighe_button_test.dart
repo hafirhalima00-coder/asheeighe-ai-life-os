@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/app/theme/app_theme.dart';
+import 'package:asheeighe/app/theme/app_theme.dart';
 
-/// A test wrapper for PinkzButton since the app uses Material3/ElevatedButton
-class PinkzButton extends StatelessWidget {
+/// A test wrapper for AsheeigheButton since the app uses Material3/ElevatedButton
+class AsheeigheButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
   final bool isLoading;
 
-  const PinkzButton({
+  const AsheeigheButton({
     super.key,
     required this.label,
     this.onPressed,
@@ -31,13 +31,13 @@ class PinkzButton extends StatelessWidget {
 }
 
 void main() {
-  group('PinkzButton', () {
+  group('AsheeigheButton', () {
     testWidgets('should display the label text', (tester) async {
       await tester.pumpWidget(
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzButton(label: 'Submit'),
+            body: AsheeigheButton(label: 'Submit'),
           ),
         ),
       );
@@ -51,7 +51,7 @@ void main() {
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzButton(
+            body: AsheeigheButton(
               label: 'Submit',
               onPressed: () => tapped = true,
             ),
@@ -69,7 +69,7 @@ void main() {
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzButton(
+            body: AsheeigheButton(
               label: 'Submit',
               isLoading: true,
             ),
@@ -86,7 +86,7 @@ void main() {
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzButton(
+            body: AsheeigheButton(
               label: 'Submit',
               onPressed: () => tapped = true,
               isLoading: true,
@@ -104,7 +104,7 @@ void main() {
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzButton(label: 'Submit'),
+            body: AsheeigheButton(label: 'Submit'),
           ),
         ),
       );
@@ -118,7 +118,7 @@ void main() {
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzButton(label: 'Submit'),
+            body: AsheeigheButton(label: 'Submit'),
           ),
         ),
       );

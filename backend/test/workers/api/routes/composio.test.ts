@@ -21,8 +21,8 @@ function createMockEnv() {
   };
 }
 
-vi.mock('@pinkz/db', () => ({ createDB: vi.fn() }));
-vi.mock('@pinkz/composio-client', () => ({
+vi.mock('@asheeighe/db', () => ({ createDB: vi.fn() }));
+vi.mock('@asheeighe/composio-client', () => ({
   ComposioClient: vi.fn(() => ({
     listIntegrations: vi.fn().mockResolvedValue([{ id: 'int-1', name: 'Google Calendar', authScheme: 'OAUTH2', description: '', categories: [] }]),
     getIntegration: vi.fn(),
@@ -35,7 +35,7 @@ vi.mock('@pinkz/composio-client', () => ({
 }));
 
 async function setup() {
-  const { default: composioRoutes } = await import('@pinkz/workers/api/src/routes/composio');
+  const { default: composioRoutes } = await import('@asheeighe/workers/api/src/routes/composio');
   const app = new Hono<any>();
   app.route('/', composioRoutes);
   return app;

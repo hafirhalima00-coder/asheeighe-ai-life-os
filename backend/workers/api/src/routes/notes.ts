@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { z } from 'zod';
 import { zValidator } from '@hono/zod-validator';
 import type { AppEnv } from '../types';
-import { generateId } from '@pinkz/core/utils';
+import { generateId } from '@asheeighe/core/utils';
 
 const notes = new Hono<AppEnv>();
 

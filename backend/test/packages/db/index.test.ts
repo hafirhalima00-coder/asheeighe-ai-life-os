@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { DB, createDB } from '@pinkz/db';
-import { DatabaseError, NotFoundError } from '@pinkz/core/errors';
+import { DB, createDB } from '@asheeighe/db';
+import { DatabaseError, NotFoundError } from '@asheeighe/core/errors';
 
 function createMockD1() {
   const mockPrepare = vi.fn().mockReturnThis();

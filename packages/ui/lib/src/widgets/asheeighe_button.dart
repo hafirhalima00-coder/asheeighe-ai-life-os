@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../theme/pinkz_colors.dart';
+import '../theme/asheeighe_colors.dart';
 
-enum PinkzButtonVariant { primary, secondary, outline, text }
+enum AsheeigheButtonVariant { primary, secondary, outline, text }
 
-class PinkzButton extends StatelessWidget {
-  final PinkzButtonVariant variant;
+class AsheeigheButton extends StatelessWidget {
+  final AsheeigheButtonVariant variant;
   final String label;
   final IconData? icon;
   final VoidCallback? onPressed;
@@ -19,9 +19,9 @@ class PinkzButton extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final bool animate;
 
-  const PinkzButton({
+  const AsheeigheButton({
     super.key,
-    this.variant = PinkzButtonVariant.primary,
+    this.variant = AsheeigheButtonVariant.primary,
     required this.label,
     this.icon,
     this.onPressed,
@@ -44,13 +44,13 @@ class PinkzButton extends StatelessWidget {
     final Widget button;
 
     switch (variant) {
-      case PinkzButtonVariant.primary:
+      case AsheeigheButtonVariant.primary:
         button = _primary(theme, isDark);
-      case PinkzButtonVariant.secondary:
+      case AsheeigheButtonVariant.secondary:
         button = _secondary(theme, isDark);
-      case PinkzButtonVariant.outline:
+      case AsheeigheButtonVariant.outline:
         button = _outline(theme, isDark);
-      case PinkzButtonVariant.text:
+      case AsheeigheButtonVariant.text:
         button = _text(theme);
     }
 
@@ -99,7 +99,7 @@ class PinkzButton extends StatelessWidget {
         onPressed: loading ? null : onPressed,
         style: FilledButton.styleFrom(
           backgroundColor: color ??
-              (isDark ? PinkzColors.darkSoftLavender : PinkzColors.softLavender),
+              (isDark ? AsheeigheColors.darkSoftLavender : AsheeigheColors.softLavender),
           foregroundColor: foregroundColor ?? Colors.black87,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),

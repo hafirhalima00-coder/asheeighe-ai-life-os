@@ -1,6 +1,6 @@
-# PINKZ Roadmap
+# asheeighe Roadmap
 
-This document outlines the current and future development milestones for PINKZ - AI Life OS. Timelines are approximate and subject to change based on community feedback and contributor availability.
+This document outlines the current and future development milestones for asheeighe - AI Life OS. Timelines are approximate and subject to change based on community feedback and contributor availability.
 
 ## Legend
 
@@ -94,8 +94,8 @@ This document outlines the current and future development milestones for PINKZ -
 
 ## Beyond
 
-- **PINKZ Marketplace** — Community plugins, themes, and templates
-- **PINKZ for Teams** — Enterprise features, admin dashboard, SSO
+- **asheeighe Marketplace** — Community plugins, themes, and templates
+- **asheeighe for Teams** — Enterprise features, admin dashboard, SSO
 - **Local-first Sync** — CRDT-based peer-to-peer synchronization
 - **Open-source AI Models** — Fully local, private LLM fine-tuned for life OS tasks
 

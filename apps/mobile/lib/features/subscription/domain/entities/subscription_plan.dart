@@ -63,7 +63,7 @@ class SubscriptionPlan {
     SubscriptionPlan(
       id: 'PRO_MONTHLY',
       name: 'Pro',
-      description: 'Unlock the full PINKZ experience',
+      description: 'Unlock the full asheeighe experience',
       price: 999,
       yearlyPrice: 7999,
       features: [

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import '../theme/pinkz_colors.dart';
+import '../theme/asheeighe_colors.dart';
 
-class PinkzGradientBackground extends StatelessWidget {
+class AsheeigheGradientBackground extends StatelessWidget {
   final Widget child;
   final List<Color>? colors;
   final AlignmentGeometry begin;
   final AlignmentGeometry end;
   final bool animate;
 
-  const PinkzGradientBackground({
+  const AsheeigheGradientBackground({
     super.key,
     required this.child,
     this.colors,
@@ -20,9 +20,9 @@ class PinkzGradientBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final effectiveColors = colors ?? [
-      PinkzColors.creamWhite,
-      PinkzColors.pastelPink.withOpacity(0.3),
-      PinkzColors.softLavender.withOpacity(0.2),
+      AsheeigheColors.creamWhite,
+      AsheeigheColors.pastelPink.withOpacity(0.3),
+      AsheeigheColors.softLavender.withOpacity(0.2),
     ];
 
     return Container(

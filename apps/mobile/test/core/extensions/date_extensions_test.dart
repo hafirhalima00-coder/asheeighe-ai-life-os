@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/core/extensions/date_extensions.dart';
+import 'package:asheeighe/core/extensions/date_extensions.dart';
 
 void main() {
   group('DateTimeExtensions', () {

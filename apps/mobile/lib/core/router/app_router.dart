@@ -453,7 +453,7 @@ class _SplashScreenState extends State<_SplashScreen>
                 ),
                 const SizedBox(height: 24),
                 const Text(
-                  'PINKZ',
+                  'asheeighe',
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.bold,

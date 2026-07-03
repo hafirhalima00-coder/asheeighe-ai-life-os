@@ -30,10 +30,10 @@ function createMockEnv() {
   };
 }
 
-vi.mock('@pinkz/db', () => ({ createDB: vi.fn() }));
+vi.mock('@asheeighe/db', () => ({ createDB: vi.fn() }));
 
 async function setup() {
-  const { default: calendarRoutes } = await import('@pinkz/workers/api/src/routes/calendar');
+  const { default: calendarRoutes } = await import('@asheeighe/workers/api/src/routes/calendar');
   const app = new Hono<any>();
   app.route('/', calendarRoutes);
   return app;
@@ -46,7 +46,7 @@ describe('Calendar Routes', () => {
   beforeEach(async () => {
     vi.clearAllMocks();
     mockDb = createMockDb();
-    const { createDB } = await import('@pinkz/db');
+    const { createDB } = await import('@asheeighe/db');
     (createDB as any).mockReturnValue(mockDb);
     app = await setup();
   });

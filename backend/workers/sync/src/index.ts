@@ -1,4 +1,4 @@
-import { createDB } from '@pinkz/db';
+import { createDB } from '@asheeighe/db';
 
 interface Env {
   DB: D1Database;

@@ -45,7 +45,7 @@ class UserLevel extends Equatable {
     25: 'Life Architect',
     30: 'Sage',
     40: 'Grandmaster',
-    50: 'PINKZ Legend',
+    50: 'Asheeighe Legend',
   };
 
   static String titleForLevel(int level) {

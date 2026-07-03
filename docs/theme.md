@@ -1,4 +1,4 @@
-# PINKZ Theme Documentation
+# asheeighe Theme Documentation
 
 ## Color Palette
 
@@ -128,11 +128,11 @@
 
 ## Light / Dark Mode
 
-The `PinkzTheme` class provides both themes:
+The `AsheeigheTheme` class provides both themes:
 
 ```dart
-PinkzTheme.light   // Light mode
-PinkzTheme.dark    // Dark mode
+AsheeigheTheme.light   // Light mode
+AsheeigheTheme.dark    // Dark mode
 ```
 
 Switching is handled via `AppTheme` in `apps/mobile/lib/app/theme/app_theme.dart`:
@@ -162,8 +162,8 @@ final themeProvider = StateNotifierProvider<ThemeModeNotifier, ThemeMode>((ref) 
 // Via ThemeData color scheme
 final color = Theme.of(context).colorScheme.primary;
 
-// Via PinkzColors constants (packages/ui)
-final color = PinkzColors.pastelPink;
+// Via AsheeigheColors constants (packages/ui)
+final color = AsheeigheColors.pastelPink;
 
 // Via glassmorphism extension
 final glassBg = Theme.of(context).glassSurface;
@@ -178,28 +178,28 @@ Text(
   style: Theme.of(context).textTheme.headlineMedium,
 );
 
-// Via PinkzTypography (for custom use)
-final style = PinkzTypography.textTheme.titleLarge;
+// Via AsheeigheTypography (for custom use)
+final style = AsheeigheTypography.textTheme.titleLarge;
 ```
 
 ### Using Widget Components
 
 ```dart
 // From packages/ui
-PinkzButton(
+AsheeigheButton(
   onPressed: () {},
   child: Text('Save'),
 );
 
-PinkzInput(
+AsheeigheInput(
   label: 'Email',
   controller: _emailController,
 );
 
-PinkzCard(
+AsheeigheCard(
   child: Column(
     children: [
-      PinkzSectionHeader(title: 'Today'),
+      AsheeigheSectionHeader(title: 'Today'),
       // content
     ],
   ),
@@ -220,10 +220,10 @@ final isDark = Theme.of(context).brightness == Brightness.dark;
 
 ### Changing the Primary Color
 
-Edit `packages/ui/lib/src/theme/pinkz_colors.dart`:
+Edit `packages/ui/lib/src/theme/asheeighe_colors.dart`:
 
 ```dart
-abstract final class PinkzColors {
+abstract final class AsheeigheColors {
   static const Color pastelPink = Color(0xFFF4C2C2);  // Change here
   // ...
 }
@@ -231,26 +231,26 @@ abstract final class PinkzColors {
 
 ### Adding New Component Styles
 
-Extend `_buildLight()` and `_buildDark()` in `pinkz_theme.dart`:
+Extend `_buildLight()` and `_buildDark()` in `asheeighe_theme.dart`:
 
 ```dart
-extension _PinkzCustomTheme on ThemeData {
-  Color get customColor => extension<_PinkzCustom>()!.color;
+extension _AsheeigheCustomTheme on ThemeData {
+  Color get customColor => extension<_AsheeigheCustom>()!.color;
 }
 
-class _PinkzCustom extends ThemeExtension<_PinkzCustom> {
+class _AsheeigheCustom extends ThemeExtension<_AsheeigheCustom> {
   final Color color;
   const _PinkzCustom({required this.color});
 
   @override
-  _PinkzCustom copyWith({Color? color}) {
-    return _PinkzCustom(color: color ?? this.color);
+  _AsheeigheCustom copyWith({Color? color}) {
+    return _AsheeigheCustom(color: color ?? this.color);
   }
 
   @override
-  _PinkzCustom lerp(_PinkzCustom? other, double t) {
+  _AsheeigheCustom lerp(_AsheeigheCustom? other, double t) {
     if (other == null) return this;
-    return _PinkzCustom(color: Color.lerp(color, other.color, t)!);
+    return _AsheeigheCustom(color: Color.lerp(color, other.color, t)!);
   }
 }
 ```
@@ -259,7 +259,7 @@ class _PinkzCustom extends ThemeExtension<_PinkzCustom> {
 
 | File | Purpose |
 |------|---------|
-| `packages/ui/lib/src/theme/pinkz_colors.dart` | Color constants |
+| `packages/ui/lib/src/theme/asheeighe_colors.dart` | Color constants |
 | `packages/ui/lib/src/theme/typography.dart` | Typography scale |
-| `packages/ui/lib/src/theme/pinkz_theme.dart` | Full ThemeData (light + dark) |
+| `packages/ui/lib/src/theme/asheeighe_theme.dart` | Full ThemeData (light + dark) |
 | `apps/mobile/lib/app/theme/app_theme.dart` | App-level theme overrides |

@@ -1,6 +1,6 @@
-import type { CalendarEvent, Task, Reminder, Note, User, ComposioConnectedAccount } from '@pinkz/core';
-import { DatabaseError, NotFoundError } from '@pinkz/core/errors';
-import { buildUpdateQuery, buildPaginationParams, mapRowToCamelCase, mapRowsToCamelCase } from '@pinkz/core/utils';
+import type { CalendarEvent, Task, Reminder, Note, User, ComposioConnectedAccount } from '@asheeighe/core';
+import { DatabaseError, NotFoundError } from '@asheeighe/core/errors';
+import { buildUpdateQuery, buildPaginationParams, mapRowToCamelCase, mapRowsToCamelCase } from '@asheeighe/core/utils';
 
 type D1Database = import('@cloudflare/workers-types').D1Database;
 type D1Result = import('@cloudflare/workers-types').D1Result;

@@ -57,7 +57,7 @@ class IslamicHeader extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           const Text(
-            'PINKZ Islamic Features',
+            'asheeighe Islamic Features',
             style: TextStyle(
               color: Colors.white,
               fontSize: 28,

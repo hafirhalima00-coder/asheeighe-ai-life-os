@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../theme/pinkz_colors.dart';
+import '../theme/asheeighe_colors.dart';
 
-class PinkzAvatar extends StatelessWidget {
+class AsheeigheAvatar extends StatelessWidget {
   final String? imageUrl;
   final String? initials;
   final double size;
@@ -10,7 +10,7 @@ class PinkzAvatar extends StatelessWidget {
   final Color? foregroundColor;
   final VoidCallback? onTap;
 
-  const PinkzAvatar({
+  const AsheeigheAvatar({
     super.key,
     this.imageUrl,
     this.initials,
@@ -27,7 +27,7 @@ class PinkzAvatar extends StatelessWidget {
     final isDark = theme.brightness == Brightness.dark;
 
     final effectiveBg = backgroundColor ??
-        (isDark ? PinkzColors.darkPastelPink : PinkzColors.pastelPink);
+        (isDark ? AsheeigheColors.darkPastelPink : AsheeigheColors.pastelPink);
 
     final hasImage = imageUrl != null && imageUrl!.isNotEmpty;
 
@@ -64,7 +64,7 @@ class PinkzAvatar extends StatelessWidget {
             width: size * 0.28,
             height: size * 0.28,
             decoration: BoxDecoration(
-              color: PinkzColors.success,
+              color: AsheeigheColors.success,
               shape: BoxShape.circle,
               border: Border.all(
                 color: theme.colorScheme.surface,

@@ -1,6 +1,6 @@
 import type { AIProvider, ChatMessage, ChatCompletionOptions, ChatCompletionResponse } from '../index';
-import type { AIProviderConfig } from '@pinkz/core';
-import { ExternalServiceError } from '@pinkz/core/errors';
+import type { AIProviderConfig } from '@asheeighe/core';
+import { ExternalServiceError } from '@asheeighe/core/errors';
 
 export class OllamaProvider implements AIProvider {
   readonly type = 'ollama' as const;

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/app/theme/app_theme.dart';
+import 'package:asheeighe/app/theme/app_theme.dart';
 
 /// A test wrapper for a themed card widget
-class PinkzCard extends StatelessWidget {
+class AsheeigheCard extends StatelessWidget {
   final String title;
   final String? subtitle;
   final Widget? trailing;
   final VoidCallback? onTap;
 
-  const PinkzCard({
+  const AsheeigheCard({
     super.key,
     required this.title,
     this.subtitle,
@@ -31,13 +31,13 @@ class PinkzCard extends StatelessWidget {
 }
 
 void main() {
-  group('PinkzCard', () {
+  group('AsheeigheCard', () {
     testWidgets('should display the title', (tester) async {
       await tester.pumpWidget(
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzCard(title: 'Test Title'),
+            body: AsheeigheCard(title: 'Test Title'),
           ),
         ),
       );
@@ -50,7 +50,7 @@ void main() {
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzCard(
+            body: AsheeigheCard(
               title: 'Test Title',
               subtitle: 'Test Subtitle',
             ),
@@ -67,7 +67,7 @@ void main() {
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzCard(
+            body: AsheeigheCard(
               title: 'Test Title',
               trailing: Icon(Icons.arrow_forward),
             ),
@@ -84,7 +84,7 @@ void main() {
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzCard(
+            body: AsheeigheCard(
               title: 'Test Title',
               onTap: () => tapped = true,
             ),
@@ -101,7 +101,7 @@ void main() {
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzCard(title: 'Test Title'),
+            body: AsheeigheCard(title: 'Test Title'),
           ),
         ),
       );
@@ -115,7 +115,7 @@ void main() {
         MaterialApp(
           theme: AppTheme.lightTheme,
           home: Scaffold(
-            body: PinkzCard(title: 'Test Title'),
+            body: AsheeigheCard(title: 'Test Title'),
           ),
         ),
       );

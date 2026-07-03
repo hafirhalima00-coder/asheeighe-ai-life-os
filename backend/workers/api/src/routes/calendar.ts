@@ -2,8 +2,8 @@ import { Hono } from 'hono';
 import { z } from 'zod';
 import { zValidator } from '@hono/zod-validator';
 import type { AppEnv } from '../types';
-import { ValidationError } from '@pinkz/core/errors';
-import { generateId } from '@pinkz/core/utils';
+import { ValidationError } from '@asheeighe/core/errors';
+import { generateId } from '@asheeighe/core/utils';
 
 const calendar = new Hono<AppEnv>();
 

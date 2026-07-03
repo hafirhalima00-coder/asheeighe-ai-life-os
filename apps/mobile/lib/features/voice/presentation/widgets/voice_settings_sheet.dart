@@ -246,7 +246,7 @@ class _VoiceSettingsSheetState extends ConsumerState<VoiceSettingsSheet> {
           ? 'بسم الله الرحمن الرحيم'
           : _language == 'fr'
               ? 'Bonjour, comment allez-vous?'
-              : 'Hello, welcome to PINKZ!',
+              : 'Hello, welcome to asheeighe!',
     );
   }
 }

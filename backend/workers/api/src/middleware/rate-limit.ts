@@ -1,6 +1,6 @@
 import type { MiddlewareHandler } from 'hono';
 import type { AppEnv } from '../types';
-import { RateLimitError } from '@pinkz/core/errors';
+import { RateLimitError } from '@asheeighe/core/errors';
 
 interface RateLimitConfig {
   windowMs: number;

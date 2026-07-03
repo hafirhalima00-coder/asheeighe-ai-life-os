@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/auth/domain/entities/auth_user.dart';
+import 'package:asheeighe/features/auth/domain/entities/auth_user.dart';
 
 void main() {
   group('AuthUser', () {

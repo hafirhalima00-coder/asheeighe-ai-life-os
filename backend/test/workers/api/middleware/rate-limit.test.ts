@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { Hono } from 'hono';
-import { RateLimitError } from '@pinkz/core/errors';
+import { RateLimitError } from '@asheeighe/core/errors';
 
 const mockKVGet = vi.fn();
 const mockKVPut = vi.fn();
@@ -18,7 +18,7 @@ function createMockEnv() {
 }
 
 async function setupApp() {
-  const { rateLimitMiddleware } = await import('@pinkz/workers/api/src/middleware/rate-limit');
+  const { rateLimitMiddleware } = await import('@asheeighe/workers/api/src/middleware/rate-limit');
   const app = new Hono<any>();
   app.use('*', rateLimitMiddleware);
   app.get('/test', (c) => c.json({ success: true }));

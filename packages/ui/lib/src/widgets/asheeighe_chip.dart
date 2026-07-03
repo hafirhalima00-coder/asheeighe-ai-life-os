@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-enum PinkzChipVariant { filter, choice, input }
+enum AsheeigheChipVariant { filter, choice, input }
 
-class PinkzChip extends StatelessWidget {
-  final PinkzChipVariant variant;
+class AsheeigheChip extends StatelessWidget {
+  final AsheeigheChipVariant variant;
   final String label;
   final IconData? icon;
   final bool selected;
@@ -13,9 +13,9 @@ class PinkzChip extends StatelessWidget {
   final Color? selectedColor;
   final Color? color;
 
-  const PinkzChip({
+  const AsheeigheChip({
     super.key,
-    this.variant = PinkzChipVariant.filter,
+    this.variant = AsheeigheChipVariant.filter,
     required this.label,
     this.icon,
     this.selected = false,
@@ -39,11 +39,11 @@ class PinkzChip extends StatelessWidget {
         selectedColor ?? theme.colorScheme.primaryContainer;
 
     switch (variant) {
-      case PinkzChipVariant.filter:
+      case AsheeigheChipVariant.filter:
         return _filterChip(theme, chipColor, selectedChipColor);
-      case PinkzChipVariant.choice:
+      case AsheeigheChipVariant.choice:
         return _choiceChip(theme, chipColor, selectedChipColor);
-      case PinkzChipVariant.input:
+      case AsheeigheChipVariant.input:
         return _inputChip(theme, chipColor);
     }
   }

@@ -1,29 +1,22 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "pinkz-backend",
+  "name": "asheeighe-backend",
   "main": "workers/api/src/index.ts",
   "compatibility_date": "2025-04-01",
   "compatibility_flags": ["nodejs_compat"],
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "pinkz-db",
-      "database_id": "pinkz-db",
+      "database_name": "asheeighe-db",
+      "database_id": "f162983e-bf08-40e0-99ab-17a8ed24b20d",
       "migrations_dir": "schemas"
     }
   ],
   "kv_namespaces": [
     {
       "binding": "KV",
-      "id": "pinkz-kv",
-      "preview_id": "pinkz-kv-preview"
-    }
-  ],
-  "r2_buckets": [
-    {
-      "binding": "R2",
-      "bucket_name": "pinkz-assets",
-      "preview_bucket_name": "pinkz-assets-preview"
+      "id": "64a4380ca01a4bf18e2b799eb5ff690a",
+      "preview_id": "64a4380ca01a4bf18e2b799eb5ff690a"
     }
   ],
   "vars": {
@@ -37,8 +30,5 @@
     "COMPOSIO_API_KEY": "",
     "COMPOSIO_BASE_URL": "https://backend.composio.dev/api",
     "APP_URL": "http://localhost:8787"
-  },
-  "routes": [
-    { "pattern": "api.pinkz.app", "custom_domain": true }
-  ]
+  }
 }

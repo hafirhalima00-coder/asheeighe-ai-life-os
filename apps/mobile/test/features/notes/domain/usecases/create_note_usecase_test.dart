@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:pinkz/core/errors/failures.dart';
-import 'package:pinkz/features/notes/domain/entities/note.dart';
-import 'package:pinkz/features/notes/domain/repositories/note_repository.dart';
-import 'package:pinkz/features/notes/domain/usecases/create_note_usecase.dart';
+import 'package:asheeighe/core/errors/failures.dart';
+import 'package:asheeighe/features/notes/domain/entities/note.dart';
+import 'package:asheeighe/features/notes/domain/repositories/note_repository.dart';
+import 'package:asheeighe/features/notes/domain/usecases/create_note_usecase.dart';
 
 class MockNoteRepository extends Mock implements NoteRepository {}
 

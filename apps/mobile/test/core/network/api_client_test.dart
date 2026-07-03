@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:pinkz/core/network/api_client.dart';
+import 'package:asheeighe/core/network/api_client.dart';
 
 class MockDio extends Mock implements Dio {}
 

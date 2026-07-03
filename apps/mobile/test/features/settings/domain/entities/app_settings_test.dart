@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/settings/domain/entities/app_settings.dart';
+import 'package:asheeighe/features/settings/domain/entities/app_settings.dart';
 
 void main() {
   group('ThemeModeType', () {
@@ -21,7 +21,7 @@ void main() {
       expect(settings.useDynamicColor, true);
       expect(settings.is24HourFormat, false);
       expect(settings.weekStartsOnMonday, true);
-      expect(settings.apiEndpoint, 'https://api.pinkz.app/v1');
+      expect(settings.apiEndpoint, 'https://api.asheeighe.app/v1');
       expect(settings.aiProvider, isNull);
       expect(settings.aiApiKey, isNull);
       expect(settings.composioApiKey, isNull);

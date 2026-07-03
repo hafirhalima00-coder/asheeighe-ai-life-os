@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pinkz/app/navigation/app_shell.dart';
-import 'package:pinkz/app/navigation/bottom_nav.dart';
+import 'package:asheeighe/app/navigation/app_shell.dart';
+import 'package:asheeighe/app/navigation/bottom_nav.dart';
 
 class FakeGoRouter extends Fake implements GoRouter {
   @override
@@ -49,7 +49,7 @@ void main() {
         ),
       );
 
-      expect(find.byType(PinkzNavigationBar), findsOneWidget);
+      expect(find.byType(AsheeigheNavigationBar), findsOneWidget);
     });
 
     testWidgets('should contain Scaffold with drawer', (tester) async {

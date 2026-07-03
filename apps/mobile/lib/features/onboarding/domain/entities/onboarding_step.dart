@@ -52,7 +52,7 @@ const List<OnboardingStep> onboardingSteps = [
   OnboardingStep(
     id: 0,
     type: OnboardingStepType.welcome,
-    title: 'Welcome to PINKZ',
+    title: 'Welcome to asheeighe',
     description: 'Your AI Life OS',
     isRequired: true,
   ),
@@ -95,7 +95,7 @@ const List<OnboardingStep> onboardingSteps = [
     id: 6,
     type: OnboardingStepType.complete,
     title: "You're All Set!",
-    description: 'Start your journey with PINKZ',
+    description: 'Start your journey with asheeighe',
     isRequired: true,
   ),
 ];

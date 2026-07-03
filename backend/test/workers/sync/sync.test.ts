@@ -20,10 +20,10 @@ function createMockEnv() {
   };
 }
 
-vi.mock('@pinkz/db', () => ({ createDB: vi.fn() }));
+vi.mock('@asheeighe/db', () => ({ createDB: vi.fn() }));
 
 async function loadSyncWorker() {
-  return (await import('@pinkz/workers/sync/src/index')).default;
+  return (await import('@asheeighe/workers/sync/src/index')).default;
 }
 
 describe('Sync Worker', () => {
@@ -35,7 +35,7 @@ describe('Sync Worker', () => {
     vi.clearAllMocks();
     mockDb = createMockDb();
     mockEnv = createMockEnv();
-    const { createDB } = await import('@pinkz/db');
+    const { createDB } = await import('@asheeighe/db');
     (createDB as any).mockReturnValue(mockDb);
     worker = await loadSyncWorker();
   });

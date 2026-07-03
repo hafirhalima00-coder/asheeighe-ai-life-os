@@ -1,4 +1,4 @@
-# PINKZ Setup Guide
+# asheeighe Setup Guide
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@
 
 ```bash
 git clone https://github.com/your-org/pinkz.git
-cd pinkz
+cd asheeighe
 ```
 
 ## Install Flutter Dependencies
@@ -124,14 +124,14 @@ The API will be available at `http://localhost:8787`.
 cd backend
 
 # Create a new migration
-npx wrangler d1 migrations create pinkz-db <migration_name>
+npx wrangler d1 migrations create asheeighe-db <migration_name>
 
 # Apply migrations
-npx wrangler d1 migrations apply pinkz-db
+npx wrangler d1 migrations apply asheeighe-db
 
 # Apply to local/remote DB
-npx wrangler d1 migrations apply pinkz-db --local
-npx wrangler d1 migrations apply pinkz-db --remote
+npx wrangler d1 migrations apply asheeighe-db --local
+npx wrangler d1 migrations apply asheeighe-db --remote
 ```
 
 ## Code Generation

@@ -157,7 +157,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen>
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Join PINKZ today',
+                    'Join asheeighe today',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           color: const Color(0xFF6B7280),
                         ),

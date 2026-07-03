@@ -15,8 +15,8 @@ import {
   mapRowsToCamelCase,
   buildUpdateQuery,
   buildPaginationParams,
-} from '@pinkz/core/utils';
-import { ValidationError } from '@pinkz/core/errors';
+} from '@asheeighe/core/utils';
+import { ValidationError } from '@asheeighe/core/errors';
 
 describe('generateId', () => {
   it('returns a string', () => {

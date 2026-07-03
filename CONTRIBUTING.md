@@ -1,6 +1,6 @@
-# Contributing to PINKZ
+# Contributing to asheeighe
 
-First off, thank you for considering contributing to PINKZ! We welcome contributions from everyone, whether it's a bug report, feature suggestion, documentation improvement, or a pull request.
+First off, thank you for considering contributing to asheeighe! We welcome contributions from everyone, whether it's a bug report, feature suggestion, documentation improvement, or a pull request.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ First off, thank you for considering contributing to PINKZ! We welcome contribut
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [PINKZ Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+This project and everyone participating in it is governed by the [asheeighe Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
 
 ## How to Contribute
 
@@ -111,4 +111,4 @@ Examples:
 
 ---
 
-Thank you for helping make PINKZ better!
+Thank you for helping make asheeighe better!

@@ -1,11 +1,11 @@
-# PINKZ API Documentation
+# asheeighe API Documentation
 
 ## Base URL
 
 | Environment | URL |
 |-------------|-----|
-| Production | `https://api.pinkz.app/v1` |
-| Staging | `https://staging-api.pinkz.app/v1` |
+| Production | `https://api.asheeighe.app/v1` |
+| Staging | `https://staging-api.asheeighe.app/v1` |
 | Local | `http://localhost:8787` |
 
 ## Authentication
@@ -63,7 +63,7 @@ GET /health
 ```json
 {
   "success": true,
-  "message": "PINKZ API is running",
+  "message": "asheeighe API is running",
   "timestamp": "2025-04-01T12:00:00.000Z",
   "version": "1.0.0"
 }

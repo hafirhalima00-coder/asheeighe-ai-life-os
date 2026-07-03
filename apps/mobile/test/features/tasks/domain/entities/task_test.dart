@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/tasks/domain/entities/task.dart';
+import 'package:asheeighe/features/tasks/domain/entities/task.dart';
 
 void main() {
   group('TaskPriority', () {

@@ -2,8 +2,8 @@ import { Hono } from 'hono';
 import { z } from 'zod';
 import { zValidator } from '@hono/zod-validator';
 import type { AppEnv } from '../types';
-import { ComposioClient } from '@pinkz/composio-client';
-import { NotFoundError } from '@pinkz/core/errors';
+import { ComposioClient } from '@asheeighe/composio-client';
+import { NotFoundError } from '@asheeighe/core/errors';
 
 const composio = new Hono<AppEnv>();
 

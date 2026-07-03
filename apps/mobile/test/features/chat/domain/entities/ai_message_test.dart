@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/chat/domain/entities/ai_message.dart';
-import 'package:pinkz/features/chat/domain/entities/skill_result.dart';
+import 'package:asheeighe/features/chat/domain/entities/ai_message.dart';
+import 'package:asheeighe/features/chat/domain/entities/skill_result.dart';
 
 void main() {
   group('MessageRole', () {

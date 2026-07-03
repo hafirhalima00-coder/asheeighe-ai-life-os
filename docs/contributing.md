@@ -1,4 +1,4 @@
-# Contributing to PINKZ
+# Contributing to asheeighe
 
 ## Code Style Guide
 
@@ -132,7 +132,7 @@ genhtml coverage/lcov.info -o coverage/html
 
 ## Commit Message Conventions
 
-PINKZ uses **Conventional Commits**:
+asheeighe uses **Conventional Commits**:
 
 ```
 <type>(<scope>): <description>

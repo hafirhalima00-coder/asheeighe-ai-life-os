@@ -542,7 +542,7 @@ class _TemplateDetailScreenState extends ConsumerState<TemplateDetailScreen> {
             Text('Pro Template', style: AppTextStyles.headlineMedium),
             const SizedBox(height: 8),
             Text(
-              'This template is exclusive to PINKZ Pro members.',
+              'This template is exclusive to asheeighe Pro members.',
               style: AppTextStyles.bodyMedium.copyWith(
                 color: AppColors.onSurface.withOpacity(0.7),
               ),

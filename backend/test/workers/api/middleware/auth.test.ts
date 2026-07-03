@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { Hono } from 'hono';
-import { AuthError } from '@pinkz/core/errors';
+import { AuthError } from '@asheeighe/core/errors';
 
 vi.mock('jsonwebtoken', () => ({
   default: {
@@ -14,7 +14,7 @@ vi.mock('jsonwebtoken', () => ({
   },
 }));
 
-vi.mock('@pinkz/db', () => ({
+vi.mock('@asheeighe/db', () => ({
   createDB: vi.fn(() => ({
     findById: vi.fn(),
   })),
@@ -31,7 +31,7 @@ function createMockEnv() {
 }
 
 async function setupApp() {
-  const { authMiddleware } = await import('@pinkz/workers/api/src/middleware/auth');
+  const { authMiddleware } = await import('@asheeighe/workers/api/src/middleware/auth');
   const app = new Hono<any>();
   app.use('*', authMiddleware);
   app.get('/protected', (c) => c.json({ success: true, userId: c.get('userId') }));
@@ -50,7 +50,7 @@ describe('Auth Middleware', () => {
     const jwt = await import('jsonwebtoken');
     (jwt.default.verify as any).mockReturnValue({ sub: 'user-1', email: 'test@test.com', iat: 100, exp: 9999999999 });
 
-    const { createDB } = await import('@pinkz/db');
+    const { createDB } = await import('@asheeighe/db');
     const mockDb = createDB({} as any);
     (mockDb.findById as any).mockResolvedValue({
       id: 'user-1', email: 'test@test.com', display_name: 'Test',
@@ -114,7 +114,7 @@ describe('Auth Middleware', () => {
     const jwt = await import('jsonwebtoken');
     (jwt.default.verify as any).mockReturnValue({ sub: 'missing-user', email: 'test@test.com', iat: 100, exp: 9999999999 });
 
-    const { createDB } = await import('@pinkz/db');
+    const { createDB } = await import('@asheeighe/db');
     const mockDb = createDB({} as any);
     (mockDb.findById as any).mockResolvedValue(null);
 

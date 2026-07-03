@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/calendar/data/models/calendar_event_model.dart';
-import 'package:pinkz/features/calendar/domain/entities/calendar_event.dart';
+import 'package:asheeighe/features/calendar/data/models/calendar_event_model.dart';
+import 'package:asheeighe/features/calendar/domain/entities/calendar_event.dart';
 
 void main() {
   group('CalendarEventModel', () {

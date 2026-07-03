@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/composio/domain/entities/composio_integration.dart';
-import 'package:pinkz/features/composio/domain/entities/connected_account.dart';
+import 'package:asheeighe/features/composio/domain/entities/composio_integration.dart';
+import 'package:asheeighe/features/composio/domain/entities/connected_account.dart';
 
 void main() {
   group('ComposioIntegration', () {

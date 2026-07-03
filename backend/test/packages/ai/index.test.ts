@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
-import { createAIProvider, OpenAIProvider } from '@pinkz/ai';
+import { createAIProvider, OpenAIProvider } from '@asheeighe/ai';
 
-vi.mock('@pinkz/ai/providers/openai', () => {
+vi.mock('@asheeighe/ai/providers/openai', () => {
   const MockOpenAI = vi.fn(() => ({
     type: 'openai',
     chat: vi.fn(),
@@ -11,7 +11,7 @@ vi.mock('@pinkz/ai/providers/openai', () => {
   return { OpenAIProvider: MockOpenAI };
 });
 
-vi.mock('@pinkz/ai/providers/anthropic', () => {
+vi.mock('@asheeighe/ai/providers/anthropic', () => {
   const MockAnthropic = vi.fn(() => ({
     type: 'anthropic',
     chat: vi.fn(),
@@ -21,7 +21,7 @@ vi.mock('@pinkz/ai/providers/anthropic', () => {
   return { AnthropicProvider: MockAnthropic };
 });
 
-vi.mock('@pinkz/ai/providers/gemini', () => {
+vi.mock('@asheeighe/ai/providers/gemini', () => {
   const MockGemini = vi.fn(() => ({
     type: 'gemini',
     chat: vi.fn(),
@@ -31,7 +31,7 @@ vi.mock('@pinkz/ai/providers/gemini', () => {
   return { GeminiProvider: MockGemini };
 });
 
-vi.mock('@pinkz/ai/providers/ollama', () => {
+vi.mock('@asheeighe/ai/providers/ollama', () => {
   const MockOllama = vi.fn(() => ({
     type: 'ollama',
     chat: vi.fn(),
@@ -41,7 +41,7 @@ vi.mock('@pinkz/ai/providers/ollama', () => {
   return { OllamaProvider: MockOllama };
 });
 
-vi.mock('@pinkz/ai/providers/openrouter', () => {
+vi.mock('@asheeighe/ai/providers/openrouter', () => {
   const MockOpenRouter = vi.fn(() => ({
     type: 'openrouter',
     chat: vi.fn(),

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/core/utils/validators.dart';
+import 'package:asheeighe/core/utils/validators.dart';
 
 void main() {
   group('FormValidators', () {

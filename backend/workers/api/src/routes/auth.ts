@@ -3,9 +3,9 @@ import { z } from 'zod';
 import { zValidator } from '@hono/zod-validator';
 import jwt from 'jsonwebtoken';
 import type { AppEnv } from '../types';
-import { createDB } from '@pinkz/db';
-import { AuthError, ConflictError } from '@pinkz/core/errors';
-import { generateId } from '@pinkz/core/utils';
+import { createDB } from '@asheeighe/db';
+import { AuthError, ConflictError } from '@asheeighe/core/errors';
+import { generateId } from '@asheeighe/core/utils';
 
 const auth = new Hono<AppEnv>();
 

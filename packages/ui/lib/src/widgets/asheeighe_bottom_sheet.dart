@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../theme/pinkz_colors.dart';
+import '../theme/asheeighe_colors.dart';
 
-class PinkzBottomSheet {
-  PinkzBottomSheet._();
+class AsheeigheBottomSheet {
+  AsheeigheBottomSheet._();
 
   static Future<T?> show<T>({
     required BuildContext context,

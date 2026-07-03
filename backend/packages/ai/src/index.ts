@@ -1,4 +1,4 @@
-import type { AIProviderConfig, AIProviderType } from '@pinkz/core';
+import type { AIProviderConfig, AIProviderType } from '@asheeighe/core';
 import { OpenAIProvider } from './providers/openai';
 import { GeminiProvider } from './providers/gemini';
 import { AnthropicProvider } from './providers/anthropic';

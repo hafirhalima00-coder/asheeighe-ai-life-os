@@ -5,8 +5,8 @@ import '../core/router/app_router.dart';
 import 'app_config.dart';
 import 'theme/app_theme.dart';
 
-class PINKZApp extends ConsumerWidget {
-  const PINKZApp({super.key});
+class AsheeigheApp extends ConsumerWidget {
+  const AsheeigheApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -27,7 +27,7 @@ class PINKZApp extends ConsumerWidget {
       locale: const Locale.fromSubtags(languageCode: 'en'),
       builder: (context, child) {
         return ScrollConfiguration(
-          behavior: _PINKZScrollBehavior(),
+          behavior: _AsheeigheScrollBehavior(),
           child: child ?? const SizedBox.shrink(),
         );
       },
@@ -35,7 +35,7 @@ class PINKZApp extends ConsumerWidget {
   }
 }
 
-class _PINKZScrollBehavior extends ScrollBehavior {
+class _AsheeigheScrollBehavior extends ScrollBehavior {
   @override
   Widget buildOverscrollIndicator(
     BuildContext context,

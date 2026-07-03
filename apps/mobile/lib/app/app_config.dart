@@ -1,12 +1,12 @@
 class AppConfig {
   const AppConfig._();
 
-  static const String appName = 'PINKZ';
+  static const String appName = 'asheeighe';
   static const String appVersion = '1.0.0';
-  static const String packageName = 'com.pinkz.app';
-  static const String apiBaseUrl = 'https://api.pinkz.app/v1';
-  static const String hiveBoxName = 'pinkz_box';
-  static const String secureStorageKey = 'pinkz_secure';
+  static const String packageName = 'com.asheeighe.app';
+  static const String apiBaseUrl = 'https://api.asheeighe.app/v1';
+  static const String hiveBoxName = 'asheeighe_box';
+  static const String secureStorageKey = 'asheeighe_secure';
   static const Duration connectTimeout = Duration(seconds: 30);
   static const Duration receiveTimeout = Duration(seconds: 30);
   static const Duration sendTimeout = Duration(seconds: 30);
@@ -21,10 +21,10 @@ class AppConfig {
   static const bool defaultNotificationsEnabled = true;
 
   // Subscription Plans
-  static const String proMonthlyPlanId = 'pinkz_pro_monthly';
-  static const String proYearlyPlanId = 'pinkz_pro_yearly';
-  static const String premiumMonthlyPlanId = 'pinkz_premium_monthly';
-  static const String premiumYearlyPlanId = 'pinkz_premium_yearly';
+  static const String proMonthlyPlanId = 'asheeighe_pro_monthly';
+  static const String proYearlyPlanId = 'asheeighe_pro_yearly';
+  static const String premiumMonthlyPlanId = 'asheeighe_premium_monthly';
+  static const String premiumYearlyPlanId = 'asheeighe_premium_yearly';
   
   // Feature Flags
   static const bool enableCodeTutor = true;

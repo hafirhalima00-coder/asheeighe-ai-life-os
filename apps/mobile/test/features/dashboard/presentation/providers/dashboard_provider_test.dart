@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:pinkz/core/errors/failures.dart';
-import 'package:pinkz/features/dashboard/domain/entities/dashboard_data.dart';
-import 'package:pinkz/features/dashboard/domain/usecases/get_dashboard_data_usecase.dart';
-import 'package:pinkz/features/dashboard/presentation/providers/dashboard_provider.dart';
+import 'package:asheeighe/core/errors/failures.dart';
+import 'package:asheeighe/features/dashboard/domain/entities/dashboard_data.dart';
+import 'package:asheeighe/features/dashboard/domain/usecases/get_dashboard_data_usecase.dart';
+import 'package:asheeighe/features/dashboard/presentation/providers/dashboard_provider.dart';
 
 class MockGetDashboardDataUseCase extends Mock implements GetDashboardDataUseCase {}
 

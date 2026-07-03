@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { ComposioClient } from '@pinkz/composio-client';
-import { ExternalServiceError } from '@pinkz/core/errors';
+import { ComposioClient } from '@asheeighe/composio-client';
+import { ExternalServiceError } from '@asheeighe/core/errors';
 
 const mockFetch = vi.fn();
 vi.stubGlobal('fetch', mockFetch);

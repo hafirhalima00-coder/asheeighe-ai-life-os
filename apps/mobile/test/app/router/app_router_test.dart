@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/core/constants/api_constants.dart';
-import 'package:pinkz/core/router/route_names.dart';
+import 'package:asheeighe/core/constants/api_constants.dart';
+import 'package:asheeighe/core/router/route_names.dart';
 
 void main() {
   group('RouteNames', () {

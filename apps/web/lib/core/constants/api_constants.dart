@@ -1,7 +1,7 @@
 class ApiConstants {
   const ApiConstants._();
 
-  static const String baseUrl = 'https://api.pinkz.app/v1';
+  static const String baseUrl = 'https://api.asheeighe.app/v1';
 
   static const String login = '/auth/login';
   static const String register = '/auth/register';

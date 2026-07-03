@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { TemplateService, TemplateCategory, TemplateFilter } from '@pinkz/social';
+import { TemplateService, TemplateCategory, TemplateFilter } from '@asheeighe/social';
 
 const templates = new Hono();
 

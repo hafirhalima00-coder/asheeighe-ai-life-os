@@ -9,7 +9,7 @@ class SubscriptionRemoteDataSource {
 
   SubscriptionRemoteDataSource({
     required this.client,
-    this.baseUrl = 'https://api.pinkz.app',
+    this.baseUrl = 'https://api.asheeighe.app',
   });
 
   Map<String, String> get _headers => {

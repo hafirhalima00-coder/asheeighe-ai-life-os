@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:pinkz/core/errors/failures.dart';
-import 'package:pinkz/features/composio/domain/entities/composio_integration.dart';
-import 'package:pinkz/features/composio/domain/repositories/composio_repository.dart';
-import 'package:pinkz/features/composio/domain/usecases/get_integrations_usecase.dart';
+import 'package:asheeighe/core/errors/failures.dart';
+import 'package:asheeighe/features/composio/domain/entities/composio_integration.dart';
+import 'package:asheeighe/features/composio/domain/repositories/composio_repository.dart';
+import 'package:asheeighe/features/composio/domain/usecases/get_integrations_usecase.dart';
 
 class MockComposioRepository extends Mock implements ComposioRepository {}
 

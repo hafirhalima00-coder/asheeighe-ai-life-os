@@ -1,8 +1,8 @@
-# PINKZ Architecture
+# asheeighe Architecture
 
 ## Project Overview
 
-PINKZ is an open-source, AI-powered life operating system. It helps users manage tasks, track habits, organize knowledge, and optimize daily routines. The system combines a Flutter mobile/web frontend with a Cloudflare Workers backend, orchestrated by intelligent agents that learn and adapt to user workflows.
+asheeighe is an open-source, AI-powered life operating system. It helps users manage tasks, track habits, organize knowledge, and optimize daily routines. The system combines a Flutter mobile/web frontend with a Cloudflare Workers backend, orchestrated by intelligent agents that learn and adapt to user workflows.
 
 ---
 
@@ -96,7 +96,7 @@ packages/
 │       └── utils/
 ├── ui/                           # Design system
 │   └── lib/src/
-│       ├── theme/                # PinkzColors, PinkzTypography, PinkzTheme
+│       ├── theme/                # AsheeigheColors, AsheeigheTypography, AsheeigheTheme
 │       ├── tokens/               # Design tokens
 │       └── widgets/              # Reusable components (buttons, inputs, cards, etc.)
 ├── features/                     # Cross-cutting feature logic (future)
@@ -183,7 +183,7 @@ GoRouter(
 )
 ```
 
-The `AppShell` renders the `PinkzNavigationBar` (compact) or `NavigationRail` (wide) plus an `AppDrawer` and `QuickActionFab`. It uses `LayoutBuilder` to switch layouts at 600px width.
+The `AppShell` renders the `AsheeigheNavigationBar` (compact) or `NavigationRail` (wide) plus an `AppDrawer` and `QuickActionFab`. It uses `LayoutBuilder` to switch layouts at 600px width.
 
 Route names are centralized in `RouteNames` to avoid string duplication.
 
@@ -296,7 +296,7 @@ GoRouter redirect detects authenticated → /dashboard
 │   JWT / PBKDF2        REST endpoints    CRDT sync        │
 │                                                          │
 │   composio worker                                        │
-│   (composio.pinkz.app)                                   │
+│   (composio.asheeighe.app)                                   │
 │   OAuth integrations                                     │
 └─────────┬────────────┬──────────────┬───────────────────┘
           │            │              │
@@ -364,9 +364,9 @@ backend/
 
 ```jsonc
 {
-  "d1_databases": [{ "binding": "DB", "database_name": "pinkz-db" }],
-  "kv_namespaces": [{ "binding": "KV", "id": "pinkz-kv" }],
-  "r2_buckets": [{ "binding": "R2", "bucket_name": "pinkz-assets" }],
+  "d1_databases": [{ "binding": "DB", "database_name": "asheeighe-db" }],
+  "kv_namespaces": [{ "binding": "KV", "id": "asheeighe-kv" }],
+  "r2_buckets": [{ "binding": "R2", "bucket_name": "asheeighe-assets" }],
   "vars": {
     "JWT_SECRET": "",
     "JWT_REFRESH_SECRET": "",
@@ -419,7 +419,7 @@ Selection happens at runtime based on `AIProviderConfig.type`. The `skill-regist
 Composio is used for third-party service integrations (Google Calendar, Slack, Notion, etc.).
 
 ```
-App → PINKZ API → Composio Client → Composio Backend → Third-Party API
+App → asheeighe API → Composio Client → Composio Backend → Third-Party API
 ```
 
 The `ComposioClient` class handles:
@@ -487,7 +487,7 @@ The sync worker handles cross-device data synchronization:
 | Auth tokens | Short-lived access (15m) + refresh (7d) tokens |
 | Token storage | `flutter_secure_storage` (Keychain/Keystore) |
 | Rate limiting | KV-based per-IP limiting |
-| CORS | Whitelist origins (`pinkz.app`, `localhost:5173`) |
+| CORS | Whitelist origins (`asheeighe.app`, `localhost:5173`) |
 | Input validation | Zod schemas on all endpoints |
 | SQL injection | Parameterized queries (D1 prepared statements) |
 | Secrets | Never committed — wrangler secrets or `.env` |

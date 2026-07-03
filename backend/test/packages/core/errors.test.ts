@@ -11,7 +11,7 @@ import {
   ExternalServiceError,
   isAppError,
   handleError,
-} from '@pinkz/core/errors';
+} from '@asheeighe/core/errors';
 
 describe('AppError', () => {
   it('creates an error with correct properties', () => {

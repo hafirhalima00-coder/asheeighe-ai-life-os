@@ -1,6 +1,6 @@
 import 'package:intl/intl.dart';
 
-extension PinkzDateTimeX on DateTime {
+extension AsheeigheDateTimeX on DateTime {
   DateTime get startOfDay => DateTime(year, month, day);
   DateTime get endOfDay =>
       DateTime(year, month, day, 23, 59, 59, 999);
@@ -53,8 +53,8 @@ extension PinkzDateTimeX on DateTime {
   }
 }
 
-abstract final class PinkzDateFormats {
-  PinkzDateFormats._();
+abstract final class AsheeigheDateFormats {
+  AsheeigheDateFormats._();
 
   static final fullDate = DateFormat('EEEE, MMMM d, y');
   static final fullDateTime = DateFormat('EEEE, MMMM d, y – h:mm a');

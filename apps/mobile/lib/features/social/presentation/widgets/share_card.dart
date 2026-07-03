@@ -92,7 +92,7 @@ class ShareCard extends StatelessWidget {
             ),
             const SizedBox(width: 8),
             Text(
-              'PINKZ',
+              'asheeighe',
               style: AppTextStyles.titleMedium.copyWith(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -181,7 +181,7 @@ class ShareCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'pinkz.app',
+          'asheeighe.app',
           style: AppTextStyles.bodySmall.copyWith(
             color: Colors.white.withOpacity(0.7),
           ),

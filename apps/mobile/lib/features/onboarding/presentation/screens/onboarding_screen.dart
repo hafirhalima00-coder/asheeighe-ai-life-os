@@ -157,7 +157,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
             ),
             const SizedBox(height: 32),
             Text(
-              'Welcome to PINKZ',
+              'Welcome to asheeighe',
               style: AppTextStyles.headlineLarge.copyWith(
                 fontWeight: FontWeight.bold,
               ),
@@ -493,7 +493,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
             ),
             const SizedBox(height: 12),
             Text(
-              'Your personalized dashboard is ready. Start your journey with PINKZ!',
+              'Your personalized dashboard is ready. Start your journey with asheeighe!',
               style: AppTextStyles.bodyLarge.copyWith(
                 color: AppColors.onSurface.withOpacity(0.7),
               ),

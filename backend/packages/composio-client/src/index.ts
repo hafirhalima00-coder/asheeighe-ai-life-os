@@ -1,4 +1,4 @@
-import { ExternalServiceError } from '@pinkz/core/errors';
+import { ExternalServiceError } from '@asheeighe/core/errors';
 
 export interface ComposioConfig {
   apiKey: string;

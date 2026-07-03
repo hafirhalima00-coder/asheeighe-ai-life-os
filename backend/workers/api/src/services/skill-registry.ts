@@ -1,6 +1,6 @@
-import type { DB } from '@pinkz/db';
-import type { AIProvider } from '@pinkz/ai';
-import type { Skill, SkillIntent, SkillContext, SkillResult } from '@pinkz/core';
+import type { DB } from '@asheeighe/db';
+import type { AIProvider } from '@asheeighe/ai';
+import type { Skill, SkillIntent, SkillContext, SkillResult } from '@asheeighe/core';
 
 export class SkillRegistry {
   private readonly skills: Map<SkillIntent, Skill> = new Map();
@@ -20,7 +20,7 @@ export class SkillRegistry {
       description: 'Create a new task for the user',
       handler: async (params, ctx) => {
         const db = ctx.db as DB;
-        const { generateId } = await import('@pinkz/core/utils');
+        const { generateId } = await import('@asheeighe/core/utils');
         const id = generateId();
         await db.insert('tasks', {
           id,
@@ -90,7 +90,7 @@ export class SkillRegistry {
       description: 'Create a new calendar event',
       handler: async (params, ctx) => {
         const db = ctx.db as DB;
-        const { generateId } = await import('@pinkz/core/utils');
+        const { generateId } = await import('@asheeighe/core/utils');
         const id = generateId();
         await db.insert('calendar_events', {
           id,
@@ -164,7 +164,7 @@ export class SkillRegistry {
       description: 'Create a new note',
       handler: async (params, ctx) => {
         const db = ctx.db as DB;
-        const { generateId } = await import('@pinkz/core/utils');
+        const { generateId } = await import('@asheeighe/core/utils');
         const id = generateId();
         await db.insert('notes', {
           id,
@@ -217,7 +217,7 @@ export class SkillRegistry {
       description: 'Create a new reminder',
       handler: async (params, ctx) => {
         const db = ctx.db as DB;
-        const { generateId } = await import('@pinkz/core/utils');
+        const { generateId } = await import('@asheeighe/core/utils');
         const id = generateId();
         await db.insert('reminders', {
           id,

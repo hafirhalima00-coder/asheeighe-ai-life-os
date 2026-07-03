@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/dashboard/presentation/widgets/insight_card.dart';
+import 'package:asheeighe/features/dashboard/presentation/widgets/insight_card.dart';
 
 void main() {
   group('InsightCard', () {

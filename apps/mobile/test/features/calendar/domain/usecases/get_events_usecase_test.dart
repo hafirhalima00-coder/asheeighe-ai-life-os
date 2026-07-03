@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:pinkz/core/errors/failures.dart';
-import 'package:pinkz/features/calendar/domain/entities/calendar_event.dart';
-import 'package:pinkz/features/calendar/domain/repositories/calendar_repository.dart';
-import 'package:pinkz/features/calendar/domain/usecases/get_events_usecase.dart';
+import 'package:asheeighe/core/errors/failures.dart';
+import 'package:asheeighe/features/calendar/domain/entities/calendar_event.dart';
+import 'package:asheeighe/features/calendar/domain/repositories/calendar_repository.dart';
+import 'package:asheeighe/features/calendar/domain/usecases/get_events_usecase.dart';
 
 class MockCalendarRepository extends Mock implements CalendarRepository {}
 

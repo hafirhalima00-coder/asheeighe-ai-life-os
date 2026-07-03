@@ -1,8 +1,10 @@
-# PINKZ - AI Life OS
+# asheeighe - AI Life OS
+
+Built by Halima Hafir
 
 **Your intelligent operating system for life.**
 
-PINKZ is an open-source, AI-powered life operating system that helps you manage tasks, track habits, organize knowledge, and optimize your daily routines. It combines a modern web frontend with a scalable backend, all orchestrated by intelligent agents that learn and adapt to your unique workflow.
+asheeighe is an open-source, AI-powered life operating system that helps you manage tasks, track habits, organize knowledge, and optimize your daily routines. It combines a modern web frontend with a scalable backend, all orchestrated by intelligent agents that learn and adapt to your unique workflow.
 
 ## Features
 
@@ -67,8 +69,8 @@ The system follows a microservices architecture with an AI orchestrator layer th
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/pinkz.git
-cd pinkz
+git clone https://github.com/your-org/asheeighe.git
+cd asheeighe
 
 # Install frontend dependencies
 cd apps/web
@@ -93,7 +95,7 @@ Visit `http://localhost:3000` to see the app running.
 ## Project Structure
 
 ```
-pinkz/
+asheeighe/
 ├── apps/
 │   ├── web/          # Next.js web application
 │   └── mobile/       # React Native mobile app
@@ -126,10 +128,10 @@ Distributed under the Apache 2.0 License. See [LICENSE](LICENSE) for more inform
 
 ## Community
 
-- [Discord](https://discord.gg/pinkz) — Join the discussion
-- [Twitter](https://twitter.com/pinkz_os) — Follow for updates
-- [GitHub Discussions](https://github.com/your-org/pinkz/discussions) — Ask questions and share ideas
+- [Discord](https://discord.gg/asheeighe) — Join the discussion
+- [Twitter](https://twitter.com/asheeighe_os) — Follow for updates
+- [GitHub Discussions](https://github.com/your-org/asheeighe/discussions) — Ask questions and share ideas
 
 ---
 
-Built with ❤️ by the PINKZ community.
+Built with love by Halima Hafir

@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pinkz/features/dashboard/domain/entities/dashboard_data.dart';
-import 'package:pinkz/features/dashboard/domain/entities/weather_info.dart';
+import 'package:asheeighe/features/dashboard/domain/entities/dashboard_data.dart';
+import 'package:asheeighe/features/dashboard/domain/entities/weather_info.dart';
 
 void main() {
   group('WeatherInfo', () {

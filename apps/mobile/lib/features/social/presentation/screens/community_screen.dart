@@ -49,7 +49,7 @@ class CommunityScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 12),
                     Text(
-                      'Connect with other PINKZ users, share templates, and discover new ways to organize your life.',
+                      'Connect with other asheeighe users, share templates, and discover new ways to organize your life.',
                       style: AppTextStyles.bodyLarge.copyWith(
                         color: AppColors.onSurface.withOpacity(0.6),
                       ),

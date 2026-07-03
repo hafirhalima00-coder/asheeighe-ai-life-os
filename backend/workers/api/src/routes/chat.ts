@@ -2,10 +2,10 @@ import { Hono } from 'hono';
 import { z } from 'zod';
 import { zValidator } from '@hono/zod-validator';
 import type { AppEnv } from '../types';
-import { createAIProvider, type ChatMessage } from '@pinkz/ai';
+import { createAIProvider, type ChatMessage } from '@asheeighe/ai';
 import { SkillRegistry } from '../services/skill-registry';
-import { ValidationError } from '@pinkz/core/errors';
-import type { AIProviderType } from '@pinkz/core';
+import { ValidationError } from '@asheeighe/core/errors';
+import type { AIProviderType } from '@asheeighe/core';
 
 const chat = new Hono<AppEnv>();
 
@@ -51,7 +51,7 @@ chat.post('/', zValidator('json', chatSchema), async (c) => {
   }
 
   const skillRegistry = new SkillRegistry(db, ai, userId);
-  const systemPrompt = `You are PINKZ AI, a helpful productivity assistant integrated with the user's calendar, tasks, notes, and reminders.
+  const systemPrompt = `You are asheeighe AI, a helpful productivity assistant integrated with the user's calendar, tasks, notes, and reminders.
 
 You have access to skills that let you interact with the user's data. When the user asks to:
 - Create, update, delete, or list tasks → use the task skills

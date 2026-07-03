@@ -23,14 +23,14 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@pinkz/core": ["./packages/core/src"],
-      "@pinkz/core/*": ["./packages/core/src/*"],
-      "@pinkz/ai": ["./packages/ai/src"],
-      "@pinkz/ai/*": ["./packages/ai/src/*"],
-      "@pinkz/db": ["./packages/db/src"],
-      "@pinkz/db/*": ["./packages/db/src/*"],
-      "@pinkz/composio-client": ["./packages/composio-client/src"],
-      "@pinkz/composio-client/*": ["./packages/composio-client/src/*"]
+      "@asheeighe/core": ["./packages/core/src"],
+      "@asheeighe/core/*": ["./packages/core/src/*"],
+      "@asheeighe/ai": ["./packages/ai/src"],
+      "@asheeighe/ai/*": ["./packages/ai/src/*"],
+      "@asheeighe/db": ["./packages/db/src"],
+      "@asheeighe/db/*": ["./packages/db/src/*"],
+      "@asheeighe/composio-client": ["./packages/composio-client/src"],
+      "@asheeighe/composio-client/*": ["./packages/composio-client/src/*"]
     }
   },
   "include": ["packages/**/*.ts", "workers/**/*.ts"],

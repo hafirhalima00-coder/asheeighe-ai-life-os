@@ -1,5 +1,5 @@
-import type { User } from '@pinkz/core';
-import type { DB } from '@pinkz/db';
+import type { User } from '@asheeighe/core';
+import type { DB } from '@asheeighe/db';
 
 export interface AppEnv {
   Bindings: {

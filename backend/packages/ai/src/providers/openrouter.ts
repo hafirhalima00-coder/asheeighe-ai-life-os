@@ -1,6 +1,6 @@
 import type { AIProvider, ChatMessage, ChatCompletionOptions, ChatCompletionResponse } from '../index';
-import type { AIProviderConfig } from '@pinkz/core';
-import { ExternalServiceError } from '@pinkz/core/errors';
+import type { AIProviderConfig } from '@asheeighe/core';
+import { ExternalServiceError } from '@asheeighe/core/errors';
 
 export class OpenRouterProvider implements AIProvider {
   readonly type = 'openrouter' as const;
@@ -89,8 +89,8 @@ export class OpenRouterProvider implements AIProvider {
     return {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${this.apiKey}`,
-      'HTTP-Referer': 'https://pinkz.app',
-      'X-Title': 'PINKZ',
+      'HTTP-Referer': 'https://asheeighe.app',
+      'X-Title': 'asheeighe',
     };
   }
 

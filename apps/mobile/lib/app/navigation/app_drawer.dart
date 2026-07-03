@@ -168,7 +168,7 @@ class AppDrawer extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           const Text(
-            'PINKZ v1.0.0',
+            'asheeighe v1.0.0',
             style: TextStyle(
               fontSize: 11,
               color: Color(0xFF9CA3AF),

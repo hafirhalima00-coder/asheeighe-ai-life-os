@@ -71,7 +71,7 @@ export const REFERRAL_MILESTONES: ReferralMilestone[] = [
   {
     requiredReferrals: 25,
     reward: { type: 'lifetime_pro', value: 1, description: 'Lifetime Pro access' },
-    title: 'PINKZ Ambassador',
+    title: 'asheeighe Ambassador',
     description: 'Invite 25 friends',
   },
 ];
@@ -298,7 +298,7 @@ export class ReferralService {
 
   private generateUniqueCode(): string {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    let code = 'PINKZ-';
+    let code = 'ASHEEIGHE-';
     for (let i = 0; i < 6; i++) {
       code += chars.charAt(Math.floor(Math.random() * chars.length));
     }
@@ -309,9 +309,9 @@ export class ReferralService {
     const code = await this.getUserReferralCode(userId);
     if (!code) {
       const newCode = await this.generateReferralCode(userId);
-      return `https://pinkz.app/join/${newCode.code}`;
+      return `https://asheeighe.app/join/${newCode.code}`;
     }
-    return `https://pinkz.app/join/${code.code}`;
+    return `https://asheeighe.app/join/${code.code}`;
   }
 
   async getShareMessage(userId: string): Promise<string> {
@@ -319,7 +319,7 @@ export class ReferralService {
     const stats = await this.getReferralStats(userId);
     const nextMilestone = stats.nextMilestone;
 
-    let message = `Join me on PINKZ - your AI Life OS! 🌸\n\nUse my referral link: ${link}\n\nWe both get rewards!`;
+    let message = `Join me on asheeighe - your AI Life OS! 🌸\n\nUse my referral link: ${link}\n\nWe both get rewards!`;
 
     if (nextMilestone) {
       message += `\n\nI'm ${stats.completedReferrals}/${nextMilestone.requiredReferrals} referrals to earning ${nextMilestone.reward.description}!`;

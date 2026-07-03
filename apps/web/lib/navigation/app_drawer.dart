@@ -30,7 +30,7 @@ class AppDrawer extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 const Text(
-                  'PINKZ User',
+                  'asheeighe User',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -38,7 +38,7 @@ class AppDrawer extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'user@pinkz.app',
+                  'user@asheeighe.app',
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.8),
                     fontSize: 14,
