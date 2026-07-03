@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022"],
+    "types": ["@cloudflare/workers-types"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": false,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@pinkz/core": ["./packages/core/src"],
+      "@pinkz/core/*": ["./packages/core/src/*"],
+      "@pinkz/ai": ["./packages/ai/src"],
+      "@pinkz/ai/*": ["./packages/ai/src/*"],
+      "@pinkz/db": ["./packages/db/src"],
+      "@pinkz/db/*": ["./packages/db/src/*"],
+      "@pinkz/composio-client": ["./packages/composio-client/src"],
+      "@pinkz/composio-client/*": ["./packages/composio-client/src/*"]
+    }
+  },
+  "include": ["packages/**/*.ts", "workers/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

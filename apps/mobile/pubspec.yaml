@@ -1,0 +1,120 @@
+name: pinkz
+description: PINKZ - Your personal productivity companion
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.4.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Routing
+  go_router: ^14.2.0
+
+  # Code generation
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Database
+  drift: ^2.19.1
+  sqlite3_flutter_libs: ^0.5.23
+  path: ^1.9.0
+
+  # Local storage
+  hive_flutter: ^1.1.0
+  hive: ^2.2.3
+  shared_preferences: ^2.2.3
+  flutter_secure_storage: ^9.2.2
+
+  # Networking
+  dio: ^5.4.3+1
+
+  # Authentication
+  google_sign_in: ^6.2.1
+  sign_in_with_apple: ^6.1.0
+
+  # Utilities
+  intl: ^0.19.0
+  uuid: ^4.4.0
+  equatable: ^2.0.5
+  dartz: ^0.10.1
+
+  # UI
+  shimmer: ^3.0.0
+  cached_network_image: ^3.3.1
+  flutter_animate: ^4.5.0
+
+  # Notifications
+  flutter_local_notifications: ^17.2.1+2
+
+  # Voice
+  speech_to_text: ^6.6.0
+  flutter_tts: ^4.0.0
+  
+  # Subscription/Payments
+  purchases_flutter: ^6.0.0  # RevenueCat
+  
+  # Social/Sharing
+  share_plus: ^7.2.0
+  url_launcher: ^6.2.0
+  
+  # QR/Code
+  qr_flutter: ^4.1.0
+  
+  # Animations
+  confetti: ^0.7.0
+  lottie: ^3.1.0
+  
+  # Charts/Analytics
+  fl_chart: ^0.66.0
+  
+  # Haptic feedback
+  vibration: ^1.8.0
+  
+  # Audio
+  audioplayers: ^5.2.0
+  
+  # PDF generation
+  printing: ^5.12.0
+  pdf: ^3.10.0
+  
+  # Connectivity
+  connectivity_plus: ^5.0.0
+  
+  # Device info
+  device_info_plus: ^9.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.9
+  freezed: ^2.5.2
+  json_serializable: ^6.8.0
+  riverpod_generator: ^2.4.0
+  drift_dev: ^2.19.1
+  hive_generator: ^2.0.1
+  mocktail: ^1.0.3
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+
+  assets:
+    - assets/images/
+    - assets/icons/

@@ -1,0 +1,103 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  flutter-build:
+    name: Build Flutter Release
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: flutter
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Restore dependencies
+        run: flutter pub get
+
+      - name: Build APK
+        run: flutter build apk --release
+
+      - name: Build AppBundle
+        run: flutter build appbundle --release
+
+      - name: Build web
+        run: flutter build web --release
+
+      - name: Upload release artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: flutter-release-artifacts
+          path: |
+            flutter/build/app/outputs/flutter-apk/*.apk
+            flutter/build/app/outputs/bundle/release/*.aab
+            flutter/build/web/**
+
+  backend-deploy:
+    name: Deploy Backend to Production
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js v22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: backend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Deploy with Wrangler
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          workingDirectory: backend
+          environment: production
+
+  github-release:
+    name: Create GitHub Release
+    needs: [flutter-build, backend-deploy]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download flutter artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: flutter-release-artifacts
+          path: artifacts/flutter
+
+      - name: Generate release notes
+        id: release_notes
+        run: |
+          echo "## Release ${{ github.ref_name }}" > release-notes.md
+          echo "" >> release-notes.md
+          echo "See the commits for details." >> release-notes.md
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ github.ref_name }}
+          body_path: release-notes.md
+          draft: false
+          prerelease: false
+          files: |
+            artifacts/flutter/**/*.apk
+            artifacts/flutter/**/*.aab

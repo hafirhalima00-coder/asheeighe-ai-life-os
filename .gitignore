@@ -1,0 +1,83 @@
+# Flutter
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.idea/
+.vscode/
+
+# Android
+apps/mobile/android/.gradle/
+apps/mobile/android/app/debug/
+apps/mobile/android/app/profile/
+apps/mobile/android/app/release/
+apps/mobile/android/local.properties
+apps/mobile/android/**/GeneratedPluginRegistrant.java
+*.jks
+*.keystore
+
+# iOS
+apps/mobile/ios/Pods/
+apps/mobile/ios/.symlinks/
+apps/mobile/ios/Flutter/Flutter.framework
+apps/mobile/ios/Flutter/Flutter.podspec
+apps/mobile/ios/Runner.xcworkspace/xcshareddata/
+apps/mobile/ios/**/*.mode1v3
+apps/mobile/ios/**/*.mode2v3
+apps/mobile/ios/**/*.moved-aside
+apps/mobile/ios/**/*.pbxuser
+apps/mobile/ios/**/*.perspectivev3
+apps/mobile/ios/**/*sync/
+apps/mobile/ios/**/.sconsign.dblite
+apps/mobile/ios/**/.tags*
+apps/mobile/ios/**/DerivedData/
+apps/mobile/ios/.generated/
+
+# Web
+apps/web/build/
+
+# Node/Backend
+node_modules/
+backend/node_modules/
+.wrangler/
+dist/
+coverage/
+*.log
+.env
+.env.local
+.env.production
+
+# Generated files
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Packages
+packages/ui/build/
+packages/core/build/
+packages/features/build/
+packages/services/build/
+
+# Dart
+.pub/
+.pub-cache/
+build/
+
+# Misc
+*.lock
+pubspec.lock

@@ -1,0 +1,44 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pinkz-backend",
+  "main": "workers/api/src/index.ts",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "pinkz-db",
+      "database_id": "pinkz-db",
+      "migrations_dir": "schemas"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "pinkz-kv",
+      "preview_id": "pinkz-kv-preview"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "R2",
+      "bucket_name": "pinkz-assets",
+      "preview_bucket_name": "pinkz-assets-preview"
+    }
+  ],
+  "vars": {
+    "JWT_SECRET": "",
+    "JWT_REFRESH_SECRET": "",
+    "OPENAI_API_KEY": "",
+    "GEMINI_API_KEY": "",
+    "ANTHROPIC_API_KEY": "",
+    "OLLAMA_BASE_URL": "http://localhost:11434",
+    "OPENROUTER_API_KEY": "",
+    "COMPOSIO_API_KEY": "",
+    "COMPOSIO_BASE_URL": "https://backend.composio.dev/api",
+    "APP_URL": "http://localhost:8787"
+  },
+  "routes": [
+    { "pattern": "api.pinkz.app", "custom_domain": true }
+  ]
+}

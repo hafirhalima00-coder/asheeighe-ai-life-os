@@ -1,0 +1,54 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - "flutter/**"
+      - "pubspec.yaml"
+      - "pubspec.lock"
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "flutter/**"
+      - "pubspec.yaml"
+      - "pubspec.lock"
+
+jobs:
+  build:
+    name: Flutter ${{ matrix.channel }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: flutter
+
+    strategy:
+      matrix:
+        channel: [stable]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ matrix.channel }}
+          cache: true
+
+      - name: Restore dependencies
+        run: flutter pub get
+
+      - name: Analyze
+        run: dart analyze
+
+      - name: Check formatting
+        run: dart format --dry-run --set-exit-if-changed .
+
+      - name: Run tests
+        run: flutter test
+
+      - name: Build APK
+        run: flutter build apk --debug
+
+      - name: Build web
+        run: flutter build web
