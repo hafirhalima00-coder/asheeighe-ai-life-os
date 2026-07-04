@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "cli-v1",
+  "snapshotId": "snap_fe5bbad8f1707c3b",
+  "testId": "8d7c0416-edd6-4fed-aacc-e7ddf05a3027",
+  "projectId": "f167eb92-cbba-474c-84e3-18cff4bf02d9",
+  "codeVersion": "v1",
+  "runIdIfAvailable": "20df1ca4-f522-4f7c-b8d4-e1af7217fa1d",
+  "targetUrl": "https://asheeighe.pages.dev",
+  "failedStepIndex": 12,
+  "failureKind": null,
+  "capturedAt": "2026-07-04T02:50:55.664Z",
+  "fetchedAt": "2026-07-04T02:51:08.798Z"
+}

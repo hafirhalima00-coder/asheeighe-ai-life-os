@@ -1,0 +1,18 @@
+{
+  "testId": "8d7c0416-edd6-4fed-aacc-e7ddf05a3027",
+  "status": "blocked",
+  "startedAt": "2026-07-04T02:46:11.454Z",
+  "finishedAt": "2026-07-04T02:50:55.664Z",
+  "videoUrl": "https://testsprite-videos.s3.us-east-1.amazonaws.com/b4f85408-f021-706b-9f35-fdbb66d610b8/1783133455365876//tmp/82158c7e-b5bc-4efb-90e5-2e19e42fcf4f/result.webm",
+  "failureAnalysisUrl": null,
+  "snapshotId": "snap_fe5bbad8f1707c3b",
+  "runIdIfAvailable": "20df1ca4-f522-4f7c-b8d4-e1af7217fa1d",
+  "codeVersion": "v1",
+  "targetUrl": "https://asheeighe.pages.dev",
+  "targetUrlSource": "run",
+  "failedStepIndex": 12,
+  "failureKind": null,
+  "verdict": "blocked",
+  "executionStatus": "completed",
+  "summary": "Blocked before a verdict could be produced: TEST BLOCKED: All requested homepage sections were verified on https://asheeighe.pages.dev during this session:\n\n- Hero: The headline \"Your intelligent operating system for life\" is visible (verified earlier in the session and present in page content).\n- Logo: The site logo text \"asheeighe\" is visible in the header.\n- Primary CTA: The button \"Get Started Free\" (primary CTA) is visible.\n- Features: The Features section (heading and feature cards) was o…"
+}

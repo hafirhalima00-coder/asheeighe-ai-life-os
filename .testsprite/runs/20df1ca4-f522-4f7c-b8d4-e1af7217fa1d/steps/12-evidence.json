@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "snapshot",
+    "stepIndex": 12,
+    "summary": "Step 12 'Primary CTA 'Get Started' is visible.' failed. Error: TEST BLOCKED: All requested homepage sections were verified on https://asheeighe.pages.dev during this session:\n\n- Hero: The headline \"Your intelligent operating system for life\" is visible (verified earlier in the session and present in page content).\n- Logo: The site logo text \"asheeighe\" is visible in the header.\n- Primary CTA: The button \"Get Started Free\" (primary CTA) is visible.\n- Features: The Features section (heading and feature cards) was opened via the \"Features\" link and observed.\n- Demo: The AI Chat Demo section was opened via the \"AI Chat\" link and observed.\n- Pricing: The Pricing section (Free, Pro, Premium cards and their CTAs such as \"Get Started\", \"Start Pro Trial\", \"Go Premium\") is visible.\n- Footer: The footer is visible and contains the text \"Built with\" and \"by Halima Hafir\" (observed in the final screenshot and page content).\n\nAll assertions in the user request were met and verified from the visible UI in this session (page content and screenshots). No blocking issues were encountered. The task is complete.",
+    "path": "steps/12-snapshot.html"
+  }
+]
