@@ -1,0 +1,43 @@
+{
+  "projectId": "f167eb92-cbba-474c-84e3-18cff4bf02d9",
+  "type": "frontend",
+  "name": "Features section shows all cards",
+  "description": "Verify the features section displays 6 feature cards with correct titles.",
+  "planSteps": [
+    {
+      "step": 1,
+      "type": "action",
+      "action": "navigate",
+      "target": "https://asheeighe.pages.dev",
+      "description": "Navigate to the homepage"
+    },
+    {
+      "step": 2,
+      "type": "action",
+      "action": "scroll_to",
+      "target": "#features",
+      "description": "Scroll to features section"
+    },
+    {
+      "step": 3,
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Everything you need",
+      "description": "Verify features section title is visible"
+    },
+    {
+      "step": 4,
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=AI Task Manager",
+      "description": "Verify AI Task Manager feature card is visible"
+    },
+    {
+      "step": 5,
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Islamic Hub",
+      "description": "Verify Islamic Hub feature card is visible"
+    }
+  ]
+}

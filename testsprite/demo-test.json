@@ -1,0 +1,36 @@
+{
+  "projectId": "f167eb92-cbba-474c-84e3-18cff4bf02d9",
+  "type": "frontend",
+  "name": "AI Chat demo section is visible",
+  "description": "Verify the AI chat demo section shows the demo window and chat messages.",
+  "planSteps": [
+    {
+      "step": 1,
+      "type": "action",
+      "action": "navigate",
+      "target": "https://asheeighe.pages.dev",
+      "description": "Navigate to the homepage"
+    },
+    {
+      "step": 2,
+      "type": "action",
+      "action": "scroll_to",
+      "target": "#demo",
+      "description": "Scroll to demo section"
+    },
+    {
+      "step": 3,
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=asheeighe AI Chat",
+      "description": "Verify demo title is visible"
+    },
+    {
+      "step": 4,
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Can you help me plan my study schedule",
+      "description": "Verify first user chat message is visible"
+    }
+  ]
+}

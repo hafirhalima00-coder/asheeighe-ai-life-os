@@ -1,0 +1,43 @@
+{
+  "projectId": "f167eb92-cbba-474c-84e3-18cff4bf02d9",
+  "type": "frontend",
+  "name": "Pricing section shows 3 plans",
+  "description": "Verify the pricing section displays Free, Pro, and Premium plans.",
+  "planSteps": [
+    {
+      "step": 1,
+      "type": "action",
+      "action": "navigate",
+      "target": "https://asheeighe.pages.dev",
+      "description": "Navigate to the homepage"
+    },
+    {
+      "step": 2,
+      "type": "action",
+      "action": "scroll_to",
+      "target": "#pricing",
+      "description": "Scroll to pricing section"
+    },
+    {
+      "step": 3,
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Simple pricing",
+      "description": "Verify pricing section title is visible"
+    },
+    {
+      "step": 4,
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=$9.99",
+      "description": "Verify Pro plan price is visible"
+    },
+    {
+      "step": 5,
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=$19.99",
+      "description": "Verify Premium plan price is visible"
+    }
+  ]
+}

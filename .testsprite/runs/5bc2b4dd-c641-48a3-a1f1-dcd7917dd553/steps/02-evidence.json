@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "snapshot",
+    "stepIndex": 2,
+    "summary": "Step 2 'Get Started button ('Get Started Free') is visible on the homepage.' failed. Error: TEST BLOCKED: Verification results for https://asheeighe.pages.dev:\n\nAll requested elements were observed visible on the homepage (based on the page content and screenshot):\n- Hero headline: \"Your intelligent operating system for life\" — visible and prominent in the hero section.\n- Navigation logo: \"asheeighe\" — visible in the top-left of the navigation bar.\n- Hero paragraph text: \"Manage tasks, track habits, organize knowledge, and optimize your daily routines with AI-powered insights and Islamic features.\" — visible below the headline.\n- Primary button: \"Get Started Free\" — visible below the paragraph.\n- Secondary button: \"See It in Action\" — visible next to the primary button.\n\nNo popups or login requirements were encountered. All assertions from the user request are satisfied and no further actions are needed.",
+    "path": "steps/02-snapshot.html"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "testId": "8d7c0416-edd6-4fed-aacc-e7ddf05a3027",
+  "status": "blocked",
+  "startedAt": "2026-07-04T02:11:17.526Z",
+  "finishedAt": "2026-07-04T02:13:42.837Z",
+  "videoUrl": "https://testsprite-videos.s3.us-east-1.amazonaws.com/b4f85408-f021-706b-9f35-fdbb66d610b8/1783131222582678//tmp/accccaaa-f645-4f20-a00a-8e652872ce8b/result.webm",
+  "failureAnalysisUrl": null,
+  "snapshotId": "snap_3ecd0bf6174f9233",
+  "runIdIfAvailable": "04d65d6f-fca4-4551-a1a8-293597bb0495",
+  "codeVersion": "v1",
+  "targetUrl": "https://asheeighe.pages.dev",
+  "targetUrlSource": "run",
+  "failedStepIndex": 3,
+  "failureKind": null,
+  "verdict": "blocked",
+  "executionStatus": "completed",
+  "summary": "Blocked before a verdict could be produced: TEST BLOCKED: Task: Verify the homepage loads with hero, features, demo, pricing, and footer sections.\n\nRequirement checklist and observed evidence:\n- Hero headline text: Verified. The page contains the headline \"Your intelligent operating system for life\" (observed in page content and browser_state). \n- 'asheeighe' logo text: Verified. The site name \"asheeighe\" is visible in the header and footer. \n- Primary CTA button: Verified. A primary CTA labele…"
+}

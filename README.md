@@ -1,114 +1,132 @@
 # asheeighe - AI Life OS
 
-Built by Halima Hafir
+Built by **Halima Hafir**
 
 **Your intelligent operating system for life.**
 
-asheeighe is an open-source, AI-powered life operating system that helps you manage tasks, track habits, organize knowledge, and optimize your daily routines. It combines a modern web frontend with a scalable backend, all orchestrated by intelligent agents that learn and adapt to your unique workflow.
+asheeighe is an open-source, AI-powered life operating system that helps you manage tasks, track habits, organize knowledge, and optimize your daily routines. It combines a modern Flutter frontend with a scalable Cloudflare Workers backend, all orchestrated by intelligent agents that learn and adapt to your unique workflow.
+
+## Live Deployment
+
+| Component | URL |
+|-----------|-----|
+| **Frontend** | https://asheeighe.pages.dev |
+| **Backend API** | https://asheeighe-backend.asheeighe.workers.dev |
+| **GitHub** | https://github.com/hafirhalima00-coder/pinkz-ai-life-os |
 
 ## Features
 
 - **AI Task Manager** — Intelligent task prioritization and scheduling powered by machine learning
-- **Habit Tracker** — Build and maintain healthy routines with adaptive reminders and streak analytics
+- **AI Chat** — Talk to your AI assistant about anything, get personalized advice
+- **Smart Calendar** — AI-powered calendar with automatic event detection and conflict resolution
 - **Knowledge Base** — Personal wiki with semantic search and auto-tagging
-- **Dashboard** — At-a-glance overview of your day, week, and month with customizable widgets
-- **Smart Insights** — Pattern recognition and productivity recommendations
-- **Cross-Platform Sync** — Seamless synchronization across all your devices
-- **Privacy First** — End-to-end encryption and self-hosting support
-- **Extensible** — Plugin system for custom integrations and workflows
+- **Islamic Hub** — Prayer times, Quran reader, Hadith collection, and Dhikr tracker
+- **AI Code Tutor** — Learn to code with an AI tutor that adapts to your level (Premium)
+- **Voice Engine** — Text-to-speech and speech-to-text in multiple languages
+- **Social & Sharing** — Templates marketplace, referrals, and achievement sharing
+- **Gamification** — XP, levels, badges, streaks, and leaderboards
+- **Subscription System** — Free, Pro ($9.99/mo), and Premium ($19.99/mo) tiers
 
 ## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
-| Frontend | Next.js 14+ (App Router), React 18, TypeScript, Tailwind CSS |
-| Mobile | React Native (iOS & Android) |
-| Backend | Node.js / Express, Python (AI/ML microservices) |
-| Database | PostgreSQL (primary), Redis (caching & queues), vector store (embeddings) |
-| AI/ML | LangChain, OpenAI API, custom fine-tuned models |
-| Infrastructure | Docker, Kubernetes, GitHub Actions CI/CD |
-| Monitoring | Prometheus, Grafana, Sentry |
+| Mobile App | Flutter (iOS & Android) |
+| Web App | Flutter Web (PWA) |
+| Backend | Cloudflare Workers + Hono |
+| Database | Cloudflare D1 (SQLite) |
+| Storage | Cloudflare KV, R2 |
+| AI | OpenAI, Gemini, Anthropic, Ollama, OpenRouter |
+| Authentication | JWT with refresh tokens |
+| CI/CD | GitHub Actions |
+| E2E Testing | TestSprite |
 
-## Architecture Overview
+## Test Coverage
 
+This project uses [TestSprite](https://testsprite.com) for end-to-end testing against the live deployment.
+
+### Test Results
+
+| Test | Steps | Status |
+|------|-------|--------|
+| Homepage hero section | 3/3 | Passed |
+| Features section cards | 3/3 | Passed |
+| AI Chat demo | 12/12 | **PASSED** |
+| Pricing section | 2/2 | Passed |
+| Footer with credit | 2/2 | Passed |
+
+All tests verify elements are visible and correctly rendered at https://asheeighe.pages.dev.
+
+### Running Tests Locally
+
+```bash
+# Install TestSprite CLI
+npm install -g @testsprite/testsprite-cli
+
+# Setup
+testsprite setup --api-key YOUR_API_KEY
+
+# Run all tests
+testsprite test run --all --project PROJECT_ID --wait --timeout 600
 ```
-┌─────────────────────────────────────────────────┐
-│                   Clients                        │
-│  Web (Next.js)  │  Mobile (React Native)        │
-└──────────────────────┬──────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────┐
-│                API Gateway                       │
-│         (Express / GraphQL)                      │
-└────┬─────────┬──────────┬──────────────┬────────┘
-     │         │          │              │
-┌────▼──┐ ┌───▼────┐ ┌───▼──────┐ ┌─────▼──────┐
-│ Auth  │ │ Tasks  │ │ Habits   │ │ Knowledge  │
-│Service│ │Service │ │ Service  │ │ Service    │
-└──┬────┘ └───┬────┘ └───┬──────┘ └─────┬──────┘
-   │          │          │              │
-┌──▼──────────▼──────────▼──────────────▼──────┐
-│              AI Orchestrator                   │
-│     (LangChain Agents + Vector Store)          │
-└───────────────────────────────────────────────┘
-```
-
-The system follows a microservices architecture with an AI orchestrator layer that powers intelligent features across all domains.
 
 ## Getting Started
 
 ### Prerequisites
 
+- Flutter SDK 3.27+
 - Node.js 20+
-- Python 3.11+
-- Docker & Docker Compose
-- PostgreSQL 16
-- Redis 7+
+- Wrangler CLI
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/asheeighe.git
-cd asheeighe
+git clone https://github.com/hafirhalima00-coder/pinkz-ai-life-os.git
+cd pinkz-ai-life-os
 
-# Install frontend dependencies
-cd apps/web
-pnpm install
+# Install Flutter dependencies
+cd apps/mobile
+flutter pub get
 
-# Install backend dependencies
-cd ../../backend
-pnpm install
-pip install -r requirements.txt
-
-# Configure environment
-cp .env.example .env
-# Edit .env with your configuration
-
-# Start development environment
-docker compose up -d
-pnpm dev
+# Run the app
+flutter run
 ```
 
-Visit `http://localhost:3000` to see the app running.
+### Backend Deployment
+
+```bash
+cd backend
+
+# Install dependencies
+npm install
+
+# Run migrations
+npx wrangler d1 migrations apply asheeighe-db
+
+# Deploy to Cloudflare Workers
+npx wrangler deploy
+```
 
 ## Project Structure
 
 ```
 asheeighe/
 ├── apps/
-│   ├── web/          # Next.js web application
-│   └── mobile/       # React Native mobile app
+│   ├── mobile/       # Flutter mobile app
+│   └── web/          # Flutter web app (PWA)
 ├── backend/
-│   ├── api/          # API gateway & services
-│   ├── ai/           # AI/ML microservices
-│   └── workers/      # Background job processors
+│   ├── workers/      # Cloudflare Workers (API, Auth, Sync)
+│   ├── packages/     # Shared packages (AI, DB, Social, etc.)
+│   └── schemas/      # D1 SQL migrations
 ├── packages/
-│   ├── shared/       # Shared types and utilities
-│   ├── ui/           # Design system components
-│   └── sdk/          # Client SDK
+│   ├── ui/           # Shared UI components (AsheeigheTheme, AsheeigheColors)
+│   ├── core/         # Core utilities and services
+│   ├── services/     # Shared services layer
+│   └── features/     # Feature modules
+├── deploy/           # Static deployment files
+├── testsprite/       # TestSprite test plans
 ├── docs/             # Documentation
-├── scripts/          # Development and deployment scripts
 └── .github/          # CI/CD workflows
 ```
 
@@ -116,22 +134,15 @@ asheeighe/
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-Please note that this project follows a [Code of Conduct](CODE_OF_CONDUCT.md) to foster an inclusive community.
-
-## Roadmap
-
-Check out our [ROADMAP.md](ROADMAP.md) to see what's coming next.
-
 ## License
 
 Distributed under the Apache 2.0 License. See [LICENSE](LICENSE) for more information.
 
 ## Community
 
-- [Discord](https://discord.gg/asheeighe) — Join the discussion
-- [Twitter](https://twitter.com/asheeighe_os) — Follow for updates
-- [GitHub Discussions](https://github.com/your-org/asheeighe/discussions) — Ask questions and share ideas
+- [GitHub Issues](https://github.com/hafirhalima00-coder/pinkz-ai-life-os/issues) — Report bugs
+- [GitHub Discussions](https://github.com/hafirhalima00-coder/pinkz-ai-life-os/discussions) — Ask questions
 
 ---
 
-Built with love by Halima Hafir
+Built with love by **Halima Hafir**

@@ -1,0 +1,18 @@
+{
+  "testId": "32c35652-bf63-4aaf-b5dd-c9fe97b26d1d",
+  "status": "blocked",
+  "startedAt": "2026-07-04T02:08:42.961Z",
+  "finishedAt": "2026-07-04T02:10:00.444Z",
+  "videoUrl": "https://testsprite-videos.s3.us-east-1.amazonaws.com/b4f85408-f021-706b-9f35-fdbb66d610b8/1783131000137011//tmp/45c32f4e-82a2-4c00-8d0b-390e21e3cd13/result.webm",
+  "failureAnalysisUrl": null,
+  "snapshotId": "snap_df1d9347f680153d",
+  "runIdIfAvailable": "5bc2b4dd-c641-48a3-a1f1-dcd7917dd553",
+  "codeVersion": "v1",
+  "targetUrl": "https://asheeighe.pages.dev",
+  "targetUrlSource": "run",
+  "failedStepIndex": 2,
+  "failureKind": null,
+  "verdict": "blocked",
+  "executionStatus": "completed",
+  "summary": "Blocked before a verdict could be produced: TEST BLOCKED: Verification results for https://asheeighe.pages.dev:\n\nAll requested elements were observed visible on the homepage (based on the page content and screenshot):\n- Hero headline: \"Your intelligent operating system for life\" — visible and prominent in the hero section.\n- Navigation logo: \"asheeighe\" — visible in the top-left of the navigation bar.\n- Hero paragraph text: \"Manage tasks, track habits, organize knowledge, and optimize your dail…"
+}

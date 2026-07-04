@@ -1,0 +1,41 @@
+name: TestSprite E2E Tests
+
+on:
+  pull_request:
+    branches: [main, master]
+  push:
+    branches: [main, master]
+
+jobs:
+  testsprite:
+    name: TestSprite E2E Tests
+    runs-on: ubuntu-latest
+    if: ${{ secrets.TESTSPRITE_API_KEY != '' }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install TestSprite CLI
+        run: npm install -g @testsprite/testsprite-cli
+
+      - name: Setup TestSprite
+        run: testsprite setup --api-key ${{ secrets.TESTSPRITE_API_KEY }}
+
+      - name: Run TestSprite tests
+        run: testsprite test run --all --project ${{ vars.TESTSPRITE_PROJECT_ID }} --wait --timeout 600
+        env:
+          TESTSPRITE_API_KEY: ${{ secrets.TESTSPRITE_API_KEY }}
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testsprite-results
+          path: .testsprite/
+          retention-days: 30

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>asheeighe - AI Life OS</title>
+  <meta name="description" content="Your intelligent operating system for life. Manage tasks, track habits, organize knowledge, and optimize your daily routines.">
+  <meta name="author" content="Halima Hafir">
+  <meta property="og:title" content="asheeighe - AI Life OS">
+  <meta property="og:description" content="Your intelligent operating system for life.">
+  <meta property="og:url" content="https://asheeighe.pages.dev">
+  <meta name="theme-color" content="#F8B4C8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --pastel-pink: #F8B4C8;
+      --soft-lavender: #C8A8E9;
+      --cream-white: #FFF5F0;
+      --glass-light: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.3);
+      --text-primary: #2D1B4E;
+      --text-secondary: #6B5B7B;
+      --accent: #E91E8C;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: linear-gradient(135deg, var(--cream-white) 0%, #F0E6FF 50%, var(--pastel-pink) 100%);
+      min-height: 100vh;
+      color: var(--text-primary);
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 16px 0;
+    }
+    
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--soft-lavender));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover { color: var(--accent); }
+    
+    /* Hero */
+    .hero {
+      padding: 160px 0 100px;
+      text-align: center;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      background: var(--glass-light);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+    
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--accent), var(--soft-lavender));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero p {
+      font-size: 20px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+    
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #D946EF);
+      color: white;
+      box-shadow: 0 4px 20px rgba(233, 30, 140, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(233, 30, 140, 0.4);
+    }
+    
+    .btn-secondary {
+      background: var(--glass-light);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      color: var(--text-primary);
+    }
+    
+    .btn-secondary:hover { background: white; }
+    
+    /* Features */
+    .features {
+      padding: 100px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 18px;
+      margin-bottom: 64px;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    
+    .feature-card {
+      background: var(--glass-light);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    }
+    
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    .feature-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    
+    .feature-card p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    .icon-pink { background: linear-gradient(135deg, #FBB6CE, #F8B4C8); }
+    .icon-purple { background: linear-gradient(135deg, #D8B4FE, #C8A8E9); }
+    .icon-blue { background: linear-gradient(135deg, #93C5FD, #818CF8); }
+    .icon-green { background: linear-gradient(135deg, #86EFAC, #6EE7B7); }
+    .icon-orange { background: linear-gradient(135deg, #FDBA74, #FB923C); }
+    .icon-teal { background: linear-gradient(135deg, #5EEAD4, #2DD4BF); }
+    
+    /* AI Chat Demo */
+    .demo-section {
+      padding: 100px 0;
+    }
+    
+    .demo-window {
+      background: var(--glass-light);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .demo-header {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .demo-dots {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .demo-dots span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    
+    .dot-red { background: #FF6B6B; }
+    .dot-yellow { background: #FECA57; }
+    .dot-green { background: #48DBFB; }
+    
+    .demo-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+    
+    .demo-body {
+      padding: 32px;
+      min-height: 400px;
+    }
+    
+    .chat-message {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .chat-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    
+    .avatar-ai { background: linear-gradient(135deg, var(--pastel-pink), var(--soft-lavender)); }
+    .avatar-user { background: linear-gradient(135deg, #818CF8, #6366F1); }
+    
+    .chat-bubble {
+      background: white;
+      border-radius: 16px;
+      padding: 14px 18px;
+      max-width: 80%;
+      line-height: 1.5;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .chat-bubble.user {
+      background: linear-gradient(135deg, var(--accent), #D946EF);
+      color: white;
+      margin-left: auto;
+    }
+    
+    /* Islamic Features */
+    .islamic-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .islamic-cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 48px;
+    }
+    
+    .islamic-card {
+      background: var(--glass-light);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 28px;
+      width: 200px;
+      text-align: center;
+    }
+    
+    .islamic-card .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+    
+    .islamic-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .islamic-card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    
+    /* Pricing */
+    .pricing {
+      padding: 100px 0;
+    }
+    
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    
+    .pricing-card {
+      background: var(--glass-light);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    
+    .pricing-card.featured {
+      background: linear-gradient(135deg, rgba(233, 30, 140, 0.08), rgba(200, 168, 233, 0.08));
+      border-color: var(--accent);
+      transform: scale(1.05);
+    }
+    
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-card.featured:hover { transform: scale(1.05) translateY(-4px); }
+    
+    .pricing-card h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .pricing-card .price {
+      font-size: 42px;
+      font-weight: 700;
+      margin: 16px 0;
+    }
+    
+    .pricing-card .price span {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
+    
+    .pricing-card ul {
+      list-style: none;
+      margin: 24px 0;
+      text-align: left;
+    }
+    
+    .pricing-card li {
+      padding: 8px 0;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    
+    .pricing-card li::before {
+      content: '✓ ';
+      color: var(--accent);
+      font-weight: 600;
+    }
+    
+    /* Footer */
+    footer {
+      padding: 60px 0 40px;
+      text-align: center;
+      border-top: 1px solid var(--glass-border);
+    }
+    
+    .footer-logo {
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--soft-lavender));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+    
+    .footer-tagline {
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .footer-links a:hover { color: var(--accent); }
+    
+    .footer-credit {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    
+    .footer-credit span { color: var(--accent); }
+    
+    /* API Status */
+    .api-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 13px;
+      color: #16A34A;
+      margin-top: 12px;
+    }
+    
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22C55E;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .pricing-card.featured { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">asheeighe</div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#demo">AI Chat</a></li>
+        <li><a href="#islamic">Islamic</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">AI Life OS</div>
+      <h1>Your <span>intelligent</span> operating system for life</h1>
+      <p>Manage tasks, track habits, organize knowledge, and optimize your daily routines with AI-powered insights and Islamic features.</p>
+      <div class="cta-group">
+        <a href="#features" class="btn btn-primary">Get Started Free</a>
+        <a href="#demo" class="btn btn-secondary">See It in Action</a>
+      </div>
+      <div class="api-status">
+        <span class="status-dot"></span>
+        API is live
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Everything you need</h2>
+      <p class="section-subtitle">Powerful features designed to help you thrive</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon icon-pink">🤖</div>
+          <h3>AI Task Manager</h3>
+          <p>Intelligent task prioritization and scheduling powered by machine learning. Let AI handle your to-do list.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon icon-purple">📅</div>
+          <h3>Smart Calendar</h3>
+          <p>AI-powered calendar with automatic event detection, conflict resolution, and optimal time slot suggestions.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon icon-blue">📝</div>
+          <h3>Knowledge Base</h3>
+          <p>Personal wiki with semantic search and auto-tagging. Find anything in seconds with AI-powered search.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon icon-green">🌙</div>
+          <h3>Islamic Hub</h3>
+          <p>Prayer times, Quran reader, Hadith collection, and Dhikr tracker. Keep your spiritual journey organized.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon icon-orange">💻</div>
+          <h3>AI Code Tutor</h3>
+          <p>Learn to code with an AI tutor that adapts to your level. Premium feature with personalized lessons.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon icon-teal">🎮</div>
+          <h3>Gamification</h3>
+          <p>XP, levels, badges, streaks, and leaderboards. Stay motivated with rewards and achievements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section" id="demo">
+    <div class="container">
+      <h2 class="section-title">AI Chat Demo</h2>
+      <p class="section-subtitle">Talk to your AI assistant about anything</p>
+      <div class="demo-window">
+        <div class="demo-header">
+          <div class="demo-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span class="demo-title">asheeighe AI Chat</span>
+        </div>
+        <div class="demo-body">
+          <div class="chat-message">
+            <div class="chat-avatar avatar-user">You</div>
+            <div class="chat-bubble user">Can you help me plan my study schedule for this week?</div>
+          </div>
+          <div class="chat-message">
+            <div class="chat-avatar avatar-ai">AI</div>
+            <div class="chat-bubble">Of course! I'd love to help you create an effective study schedule. Let me ask a few questions first:
+
+1. What subjects are you studying?
+2. Do you have any exams coming up?
+3. How many hours per day can you dedicate to studying?
+4. Are there any specific times you prefer to study?
+
+Once I know these details, I'll create a personalized schedule that also accounts for your prayer times and rest periods.</div>
+          </div>
+          <div class="chat-message">
+            <div class="chat-avatar avatar-user">You</div>
+            <div class="chat-bubble user">I'm studying Math and Physics. Final exams in 2 weeks. I can study 4 hours a day.</div>
+          </div>
+          <div class="chat-message">
+            <div class="chat-avatar avatar-ai">AI</div>
+            <div class="chat-bubble">Perfect! Here's a optimized 2-week study plan:
+
+<strong>Week 1:</strong>
+• Mon-Wed: Math (2hrs) + Physics (2hrs)
+• Thu-Fri: Physics (2hrs) + Math (2hrs)
+• Weekend: Review + Practice Tests
+
+<strong>Week 2:</strong>
+• Focus on weak areas
+• Daily practice tests
+• Light review before exams
+
+I'll also set up reminders for each study session and track your progress. Shall I add this to your calendar?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="islamic-section" id="islamic">
+    <div class="container">
+      <h2 class="section-title">Islamic Features</h2>
+      <p class="section-subtitle">Keep your spiritual journey organized</p>
+      <div class="islamic-cards">
+        <div class="islamic-card">
+          <div class="icon">🕌</div>
+          <h4>Prayer Times</h4>
+          <p>Automatic prayer time alerts based on your location</p>
+        </div>
+        <div class="islamic-card">
+          <div class="icon">📖</div>
+          <h4>Quran Reader</h4>
+          <p>Read and track your Quran reading progress</p>
+        </div>
+        <div class="islamic-card">
+          <div class="icon">📿</div>
+          <h4>Dhikr Tracker</h4>
+          <p>Track your daily dhikr and remembrance</p>
+        </div>
+        <div class="islamic-card">
+          <div class="icon">📚</div>
+          <h4>Hadith Collection</h4>
+          <p>Browse and save authentic hadiths</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Simple pricing</h2>
+      <p class="section-subtitle">Start free, upgrade when you need more</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Free</h3>
+          <div class="price">$0<span>/month</span></div>
+          <ul>
+            <li>5 AI messages per day</li>
+            <li>Basic task management</li>
+            <li>Calendar integration</li>
+            <li>Prayer times</li>
+          </ul>
+          <a href="#" class="btn btn-secondary" style="width:100%;display:block;">Get Started</a>
+        </div>
+        <div class="pricing-card featured">
+          <h3>Pro</h3>
+          <div class="price">$9.99<span>/month</span></div>
+          <ul>
+            <li>Unlimited AI messages</li>
+            <li>Advanced analytics</li>
+            <li>Voice features</li>
+            <li>Social & sharing</li>
+            <li>Templates marketplace</li>
+          </ul>
+          <a href="#" class="btn btn-primary" style="width:100%;display:block;">Start Pro Trial</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Premium</h3>
+          <div class="price">$19.99<span>/month</span></div>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>AI Code Tutor</li>
+            <li>Priority support</li>
+            <li>Early access features</li>
+            <li>Custom integrations</li>
+          </ul>
+          <a href="#" class="btn btn-secondary" style="width:100%;display:block;">Go Premium</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">asheeighe</div>
+      <p class="footer-tagline">Your intelligent operating system for life</p>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="https://github.com/hafirhalima00-coder/pinkz-ai-life-os">GitHub</a>
+        <a href="https://asheeighe-backend.asheeighe.workers.dev">API</a>
+      </div>
+      <p class="footer-credit">Built with <span>♥</span> by <strong>Halima Hafir</strong></p>
+    </div>
+  </footer>
+
+  <script>
+    // Check API status
+    fetch('https://asheeighe-backend.asheeighe.workers.dev')
+      .then(r => r.json())
+      .then(data => {
+        document.querySelector('.status-dot').style.background = '#22C55E';
+        document.querySelector('.api-status').innerHTML = '<span class="status-dot"></span> API v1 is live';
+      })
+      .catch(() => {
+        document.querySelector('.status-dot').style.background = '#EF4444';
+        document.querySelector('.api-status').innerHTML = '<span class="status-dot" style="background:#EF4444"></span> API offline';
+      });
+  </script>
+</body>
+</html>

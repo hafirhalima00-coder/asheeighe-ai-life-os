@@ -1,0 +1,36 @@
+{
+  "projectId": "f167eb92-cbba-474c-84e3-18cff4bf02d9",
+  "type": "frontend",
+  "name": "Footer displays credit and links",
+  "description": "Verify the footer shows the asheeighe logo, build credit, and navigation links.",
+  "planSteps": [
+    {
+      "step": 1,
+      "type": "action",
+      "action": "navigate",
+      "target": "https://asheeighe.pages.dev",
+      "description": "Navigate to the homepage"
+    },
+    {
+      "step": 2,
+      "type": "action",
+      "action": "scroll_to",
+      "target": "footer",
+      "description": "Scroll to footer"
+    },
+    {
+      "step": 3,
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Halima Hafir",
+      "description": "Verify build credit is visible"
+    },
+    {
+      "step": 4,
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Your intelligent operating system for life",
+      "description": "Verify footer tagline is visible"
+    }
+  ]
+}
