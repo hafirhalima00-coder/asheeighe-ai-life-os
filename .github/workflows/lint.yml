@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: flutter
+        working-directory: apps/mobile
 
     steps:
       - uses: actions/checkout@v4
@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: flutter-lint-report
-          path: flutter/**/analysis_options.yaml
+          path: apps/mobile/**/analysis_options.yaml
 
   node:
     name: Node Lint & Format
