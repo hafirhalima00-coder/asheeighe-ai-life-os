@@ -21,7 +21,7 @@ class AppSettings {
     this.useDynamicColor = true,
     this.is24HourFormat = false,
     this.weekStartsOnMonday = true,
-    this.apiEndpoint = 'https://api.pinkz.app/v1',
+    this.apiEndpoint = 'https://api.asheeighe.app/v1',
     this.aiProvider,
     this.aiApiKey,
     this.composioApiKey,

@@ -54,14 +54,14 @@ describe('ComposioClient', () => {
       const response = { connectionUrl: 'https://auth.composio.dev/start', connectionId: 'conn-123' };
       mockFetch.mockResolvedValueOnce({ ok: true, json: () => Promise.resolve(response) });
 
-      const result = await client.initiateConnection('int-1', 'https://pinkz.app/callback');
+      const result = await client.initiateConnection('int-1', 'https://asheeighe.app/callback');
       expect(result.connectionUrl).toBe('https://auth.composio.dev/start');
       expect(result.connectionId).toBe('conn-123');
       expect(mockFetch).toHaveBeenCalledWith(
         'https://custom.composio.dev/api/v1/connections/initiate',
         expect.objectContaining({
           method: 'POST',
-          body: JSON.stringify({ integrationId: 'int-1', redirectUri: 'https://pinkz.app/callback' }),
+          body: JSON.stringify({ integrationId: 'int-1', redirectUri: 'https://asheeighe.app/callback' }),
         }),
       );
     });

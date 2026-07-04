@@ -12,7 +12,7 @@ asheeighe is an open-source, AI-powered life operating system that helps you man
 |-----------|-----|
 | **Frontend** | https://asheeighe.pages.dev |
 | **Backend API** | https://asheeighe-backend.asheeighe.workers.dev |
-| **GitHub** | https://github.com/hafirhalima00-coder/pinkz-ai-life-os |
+| **GitHub** | https://github.com/hafirhalima00-coder/asheeighe-ai-life-os |
 
 ## Features
 
@@ -82,8 +82,8 @@ testsprite test run --all --project PROJECT_ID --wait --timeout 600
 
 ```bash
 # Clone the repository
-git clone https://github.com/hafirhalima00-coder/pinkz-ai-life-os.git
-cd pinkz-ai-life-os
+git clone https://github.com/hafirhalima00-coder/asheeighe-ai-life-os.git
+cd asheeighe-ai-life-os
 
 # Install Flutter dependencies
 cd apps/mobile
@@ -140,8 +140,8 @@ Distributed under the Apache 2.0 License. See [LICENSE](LICENSE) for more inform
 
 ## Community
 
-- [GitHub Issues](https://github.com/hafirhalima00-coder/pinkz-ai-life-os/issues) — Report bugs
-- [GitHub Discussions](https://github.com/hafirhalima00-coder/pinkz-ai-life-os/discussions) — Ask questions
+- [GitHub Issues](https://github.com/hafirhalima00-coder/asheeighe-ai-life-os/issues) — Report bugs
+- [GitHub Discussions](https://github.com/hafirhalima00-coder/asheeighe-ai-life-os/discussions) — Ask questions
 
 ---
 

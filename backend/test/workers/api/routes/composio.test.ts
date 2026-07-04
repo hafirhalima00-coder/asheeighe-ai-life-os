@@ -69,7 +69,7 @@ describe('Composio Routes', () => {
     const res = await app.request('/connections/initiate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ integrationId: 'int-1', redirectUri: 'https://pinkz.app/callback' }),
+      body: JSON.stringify({ integrationId: 'int-1', redirectUri: 'https://asheeighe.app/callback' }),
     }, { ...createMockEnv(), userId: 'user1', db: mockDb });
 
     expect(res.status).toBe(200);

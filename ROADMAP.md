@@ -104,7 +104,7 @@ This document outlines the current and future development milestones for asheeig
 ## How to Influence the Roadmap
 
 - Vote on features via GitHub Issues reactions
-- Participate in [Discussions](https://github.com/your-org/pinkz/discussions)
+- Participate in [Discussions](https://github.com/your-org/asheeighe-ai-life-os/discussions)
 - Submit a feature request with a detailed use case
 - Contribute! The fastest way to see a feature shipped is to build it
 

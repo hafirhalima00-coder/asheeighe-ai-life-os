@@ -82,7 +82,7 @@ describe('isValidUrl', () => {
   it('accepts valid URLs', () => {
     expect(isValidUrl('https://example.com')).toBe(true);
     expect(isValidUrl('http://localhost:3000')).toBe(true);
-    expect(isValidUrl('https://pinkz.app/path?q=1')).toBe(true);
+    expect(isValidUrl('https://asheeighe.app/path?q=1')).toBe(true);
   });
 
   it('rejects invalid URLs', () => {

@@ -292,7 +292,7 @@ GoRouter redirect detects authenticated → /dashboard
 │                   Cloudflare Workers                      │
 │                                                          │
 │   auth worker         api worker         sync worker     │
-│   (auth.pinkz.app)    (api.pinkz.app)  (sync.pinkz.app) │
+│   (auth.asheeighe.app)    (api.asheeighe.app)  (sync.asheeighe.app) │
 │   JWT / PBKDF2        REST endpoints    CRDT sync        │
 │                                                          │
 │   composio worker                                        │

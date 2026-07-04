@@ -13,7 +13,7 @@
 ## Clone Repository
 
 ```bash
-git clone https://github.com/your-org/pinkz.git
+git clone https://github.com/your-org/asheeighe-ai-life-os.git
 cd asheeighe
 ```
 
@@ -183,7 +183,7 @@ npx wrangler deploy --config workers/sync/wrangler.jsonc
 | `flutter pub get` fails | Check Dart SDK version (`dart --version`). Ensure Flutter 3.4+ |
 | Build runner conflicts | Use `dart run build_runner build --delete-conflicting-outputs` |
 | CORS errors | Ensure `APP_URL` matches your local dev URL |
-| D1 migration fails | Run `npx wrangler d1 migrations apply pinkz-db --local` to test locally |
+| D1 migration fails | Run `npx wrangler d1 migrations apply asheeighe-ai-life-os-db --local` to test locally |
 | Worker not found | Run `npx wrangler deploy` first, or use `--local` for local dev |
 | Missing secrets | All secrets must be set via `wrangler secret put` before deploy |
 | Port already in use | Use `--port <PORT>` flag with `wrangler dev` |
